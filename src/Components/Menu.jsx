@@ -34,9 +34,6 @@ export default function Menu() {
               <li>
                 <Link to="/about">אודות</Link>
               </li>
-              <li>
-                <Link to="/Contact" onClick={e => e.preventDefault()}>יצירת קשר</Link>
-              </li>
             </ul>
           </div>
         </div>
