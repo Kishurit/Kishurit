@@ -7,13 +7,9 @@ export default function Menu() {
     <>
       <nav className="navbar navbar-inverse navbar-fixed-top">
         <div className="container-fluid">
-          <Link
-            className="navbar-brand navbar-right"
-            to="/"
-            style={{ marginLeft: "1%", marginRight: "-1%" }}
-          >
-            דף הבית
-          </Link>
+          <a className="navbar-brand navbar-right" href="/" style={{ marginLeft: "0.5%", marginRight: "-,0.5%" }}>
+            קישורית
+          </a>
           <div className="navbar-header">
             <button
               type="button"
@@ -32,7 +28,7 @@ export default function Menu() {
           <div className="collapse navbar-collapse" id="navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <Link to="/about">אודות</Link>
+                <a href="/about" style={{fontSize: '1.5em'}}>אודות</a>
               </li>
             </ul>
           </div>
