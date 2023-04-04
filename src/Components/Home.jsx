@@ -3,9 +3,9 @@ import "../style.css"
 
 import { useState, useEffect } from 'react'
 import UI from "./UI"
+import employmentData from '../JSON/db2.json';
 
-export default function Home(props) {
-
+export default function Home() {
   const [data, setData] = useState()
 
   const getDataFromJson = () => {
@@ -21,12 +21,11 @@ export default function Home(props) {
       console.error('Error:', error);
     });
   }
-  
-  useEffect(() => {
-    getDataFromJson ();
-  }, []);
 
-  if (data == null || data === "" || data === undefined) return <p>Null</p>
+  useEffect(() => {
+    setData (employmentData.job)
+  }, [])
+
   return (
       <UI data={data}></UI>
   )

@@ -1,16 +1,9 @@
+import React from 'react'
 import '../App.css'
 import "../style.css"
 
 export default function DataTable(props) {
-
-/*onClick={e => handleSubmit(e) }    
-const handleSubmit = (e) => {
-    e.preventDefault();
-    var arr = String(e.target).split("https://")
-    alert (arr)
-    //window.location.href = "https://" + arr[1];
-}*/
-    
+   
 return (
     <table className="panel-body table table-bordered table-striped table-hover table-condensed text-center" id="testTable">
     <thead>
@@ -27,11 +20,17 @@ return (
     {
         props.data.links.map ((e1, i) => {
             return props.soryByAtrr(e1.links).map ((e2, j) => {
-            return ([ 
-                (j=== 0) ? 
-                <tr className="borderCat"><td colSpan="100"><h4 className="cat">{ e1.cat }</h4></td></tr> : "",
-      
-                <tr key={j} className={ (j === 0) ? "borderTop": ''}> 
+            return (
+                <React.Fragment key={j}>
+                { (j === 0) && 
+                    <tr className="borderCat">
+                        <td colSpan="100">
+                            <h4 className="cat">{ e1.cat }</h4>
+                        </td>
+                    </tr> 
+                }
+                
+                <tr className={ (j === 0) ? "borderTop": ''}> 
                     <td className="numberCell">{ props.AdjustNum(j)}</td>
                     <td className="nameCell">
                     { (e2.link !== '') ? <a href={e2.link} >{e2.site_name}</a> : e2.site_name }
@@ -51,7 +50,8 @@ return (
                     </td>
 
                 </tr>
-                ])
+                </React.Fragment>
+                )
             })
         }) 
     }

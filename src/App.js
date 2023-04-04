@@ -1,9 +1,11 @@
 import './App.css'
 import "./style.css"
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 import Home from './Components/Home.jsx'
 import About from './Components/About.jsx'
+import Menu from './Components/Menu';
+import React from 'react';
 
 export default function App(props) {
   
@@ -11,6 +13,8 @@ export default function App(props) {
 
   return (
       <Router forceRefresh={false} basename={process.env.PUBLIC_URL} history={history}>
+        <Menu/>
+        <div style={{marginTop: "50px"}}>
         <Route render = {({ location }) => (
         <Switch location = { location }>
           <Route exact path='/' component={()=>{return <Home />}}/>
@@ -18,6 +22,7 @@ export default function App(props) {
           <Route exact path='*' component={()=>{return <p>Null</p> }} status={404}/>
         </Switch>
         )} />
+        </div>
       </Router>
   )
 }

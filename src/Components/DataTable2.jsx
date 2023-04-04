@@ -17,14 +17,17 @@ return (
     <div className="list-group" id="list2">
     {
         props.data.links.map ((e1, i) => {
-            return <div key={i} className="text-right"> 
+            return ( 
+            <div key={'subCat'+i} className="text-right">
             <span className="list-group-item active text-center" 
-            style = {{ fontWeight: "lighter", margin: '0', padding: '1px 0 1px 0', borderRadius: '0'}} onClick={ e => e.preventDefault()}>
-            <h4 style={{ marginLeft: "1%", marginRight: "1%"}}>{ e1.cat }</h4></span>
+            style = {{ fontWeight: "lighter", margin: '0', padding: '1px 0 1px 0', borderRadius: '0'}}>
+                <h4 style={{ marginLeft: "1%", marginRight: "1%"}}>{ e1.cat }</h4>
+            </span>
+
             {
                 props.soryByAtrr(e1.links).map ((e2, j) => {
-                  return  <span key={"j"+i+""+j} className="list-group-item text-right links" 
-                  onClick={e => e.preventDefault()}>
+                  return  <span key={'links'+j} className="list-group-item text-right links" 
+                  style={{border:'none'}}>
 
                     { props.AdjustNum(j) + ". "}<a onClick={e =>  { e.preventDefault(); window.location.href = e.target; } } href={e2.link}>{e2.site_name}</a>  
 
@@ -55,10 +58,11 @@ return (
                     </span>
                 })
             }
-            </div>
+            
+            </div>)
         })
 
     }
-    </div>
-    )
+
+    </div>)
 }
