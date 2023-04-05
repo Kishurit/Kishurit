@@ -1,11 +1,11 @@
-import './App.css'
-import "./style.css"
+import React from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 import Home from './Components/Home.jsx'
 import About from './Components/About.jsx'
 import Menu from './Components/Menu';
-import React from 'react';
+import './App.css'
+import "./style.css"
 
 export default function App(props) {
   

@@ -1,20 +1,16 @@
 import '../App.css'
 import "../style.css"
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import DataTable from "./DataTable2";
 
 export default function UI(props) {
-  const [data, setData] = useState() 
+  const data = useMemo (() => props.data, [props])
   const [index, setIndex] = useState (0)
   const [searchData, setSearchData] = useState()
   const [searchText, setSearchText] = useState("")
   const [check1, setCheck1] = useState (false)
   const [location, setLocation] = useState ("")
-
-  useEffect(() => {
-    setData (props.data)
-  }, [props])
 
   const AdjustNum = (num) => {
      num++;
