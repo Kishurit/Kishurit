@@ -78,7 +78,6 @@ input[type="radio"], input[type="checkbox"] {
   margin-right: -1.2em;
 }
 
-.list-group-item:hover { background-color: lightgray;}
 .list-group-item { border-radius: 0; width: 100%; }
 .list-group-item a { 
     margin: auto 2% auto 1%;  
@@ -86,7 +85,7 @@ input[type="radio"], input[type="checkbox"] {
     border-left: 1px solid black; 
 }
 .list-group-item a:last-child { border: none; }
-#dataTable { margin-bottom: 6%; }
+#dataTable { margin-bottom: 4%; }
 /*---------------------------------------------------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 768px) {
@@ -116,9 +115,8 @@ input[type="radio"], input[type="checkbox"] {
     border-left: 1px solid black; 
   }
 
-  .list-group-item a:last-child { border: none;}
   .list-group-item, .list-group-item .active { border-radius: 0;}
   
-  #dataTable { margin-bottom: 18%; }
+  #dataTable { margin-bottom: 12%; }
 }
 

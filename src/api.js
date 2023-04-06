@@ -17,7 +17,6 @@ export const fetchData =  async (url, method='POST', dataForServer = undefined) 
     }
 
     try {
-        console.log (requestOptions)
         const  {data} = await axios(serverURL(url), requestOptions)
         console.log (data);
         return data;

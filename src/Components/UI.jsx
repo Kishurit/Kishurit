@@ -2,7 +2,7 @@ import '../App.css'
 import "../style.css"
 
 import React, { useState, useEffect, useMemo } from 'react'
-import DataTable from "./DataTable2";
+import DataTable from "./DataTable3";
 
 export default function UI(props) {
   const data = useMemo (() => props.data, [props])
@@ -66,15 +66,12 @@ export default function UI(props) {
   //<h3 id= "title" style = {{ fontWeight: "lighter", textDecoration: "underline" }}>קטלוג אתרים של מקומות תעסוקה וחברות כוח אדם</h3>
   return (
     <React.Fragment>
-    <div className="container text-center pull-center">
-      <div className="panel" id="panelForm">
-        
+    <div className="container text-center pull-center">       
         <h2 className="text-center title" style = {{ textDecoration: "underline" }}>קישורית</h2>
         <br style = {{padding: "0", margin: "0"}} />
         <h4 className="text-right">{ getTotalNum() } רשומות  </h4>
         
-        <div className="text-center pull-right 
-        col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div className="text-center pull-right col-lg-4 col-md-4 col-sm-12 col-xs-12">
 
         <div className="input-group input-group-sm" id="searchForm" style={{ direction: "ltr" }} >
           <span className="input-group-btn">
@@ -118,33 +115,29 @@ export default function UI(props) {
         }
         </select>
         </div>
-        </div>
 
 
-      <div id="dataTable" className="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2"
-      style={{ marginTop: "2%"}}>
-        <div className="panel panel-info" style={{border: "none"}}>
-          <div className="panel-heading">
-          <h3 style = {{ fontWeight: "lighter", margin: '0', padding: '.5em 0 .5em 0'}}>
-          { (index !== -1) ? data[index].name: (searchData.links.length !== 0) ? "חיפוש: " + searchText: "לא נמצאו רשומות עבור: " + searchText } </h3>
+        <div id="dataTable" className="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-4"
+        style={{ marginTop: "2%"}}>
+            <h3 style = {{ fontWeight: "lighter", margin: '0', padding: '.5em 0 .5em 0'}}>
+            { (index !== -1) ? data[index].name: (searchData.links.length !== 0) ? "חיפוש: " + searchText: "לא נמצאו רשומות עבור: " + searchText } 
+            </h3>
+            {
+              (index === -1) ?  
+              <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={searchData}></DataTable>:
+              <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={data[index]}></DataTable>              
+            }
           </div>
-          <div className="panel-body"></div>
-          {
-            (index === -1) ?  
-            <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={searchData}></DataTable>:
-            <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={data[index]}></DataTable>              
-          }
-        </div>
-      </div>         
-    </div>
-    
-    <footer className="well well-sm panel-footer text-right navbar-fixed-bottom" 
-    style={{ margin: "0 0 0 0", padding:"auto", borderRadius: '0', border: 'none', marginTop: "10em"}}>
-        
-       <span style={{ padding: 'auto', margin: 'auto'}}>
-          { getTotalNum() } רשומות
-        </span>
-    </footer> 
+
+      </div>
+
+      <footer className="well well-sm panel-footer text-right navbar-fixed-bottom" 
+      style={{ margin: "0 0 0 0", padding:"auto", borderRadius: '0', border: 'none', marginTop: "10em"}}>
+          
+        <span style={{ padding: 'auto', margin: 'auto'}}>
+            { getTotalNum() } רשומות
+          </span>
+      </footer> 
     </React.Fragment>
   )
 }
