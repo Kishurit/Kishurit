@@ -27,34 +27,34 @@ return (
 
             {
                 props.soryByAtrr(e1.links).map ((e2, j) => {
-                  return  <span key={'links'+j} className="list-group-item text-right" 
+                  return <span key={'links'+j} className="list-group-item text-right" 
                   style={{border:'none', margin: '0', marginTop: "1%", padding: '1% 5% 1% 5%'}}>
 
-                    { props.AdjustNum(j) + ". "}<a onClick={e =>  { e.preventDefault(); window.location.href = e.target; } } href={e2.link}>{e2.site_name}</a>  
+                        { props.AdjustNum(j) + ". "}<a href={e2.link}>{e2.site_name}</a>  
 
-                    { (e2.link2.trim() !== '')? 
-                        <a onClick={e => window.location.href = e.target} className="text-right" href={e2.link2} >קישור 2</a> 
-                        : ''}
+                        { (e2.link2 !== undefined && e2.link2.trim() !== '') &&
+                        <a className="text-right" href={e2.link2} >קישור 2</a> 
+                        }
 
-                        { (e2.link3 !== undefined && e2.link3.trim() !== '')? 
-                        <a onClick={e => window.location.href = e.target} className="text-right" href={e2.link3} >קישור 3</a> 
-                        : ''}
+                        { (e2.link3 !== undefined && e2.link3.trim() !== '') 
+                            && <a className="text-right" href={e2.link3} >קישור 3</a> 
+                        }
 
-                        { (e2.facebook_link1.trim() !== '') ? 
-                        <a onClick={e => window.location.href = e.target} className="text-right" href={e2.facebook_link1} >דף פייסבוק</a>
-                        : '' }
+                        { (e2.facebook_link1 !== undefined && e2.facebook_link1.trim() !== '') &&
+                        <a className="text-right" href={e2.facebook_link1} >דף פייסבוק</a>
+                        }
 
-                        { (e2.facebook_link2.trim() !== '') ? 
-                        <a onClick={e => window.location.href = e.target} className="text-right" href={e2.facebook_link2} >דף פייסבוק2</a>
-                        : '' }
+                        { (e2.facebook_link2 !== undefined && e2.facebook_link2.trim() !== '') && 
+                        <a className="text-right" href={e2.facebook_link2} >דף פייסבוק2</a>
+                        }
 
-                        { (e2.linkedIn_link.trim() !== '') ? 
-                        <a onClick={e => window.location.href = e.target} className="text-right" href={e2.linkedIn_link} >לינקדאין</a>
-                        : ''}
+                        { (e2.linkedIn_link !== undefined && e2.linkedIn_link.trim() !== '') &&
+                        <a className="text-right" href={e2.linkedIn_link} >לינקדאין</a>
+                        }
 
-                        { (e2.instagram_link !== undefined && e2.instagram_link.trim() !== '') ? 
-                        <a onClick={e => window.location.href = e.target} className="text-right" href={e2.instagram_link} >דף אינסטגרם</a>
-                        : '' }
+                        { (e2.instagram_link !== undefined && e2.instagram_link.trim() !== '') &&
+                        <a className="text-right" href={e2.instagram_link} >דף אינסטגרם</a>
+                        }
 
                     </span>
                 })

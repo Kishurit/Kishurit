@@ -94,7 +94,7 @@ input[type="radio"], input[type="checkbox"] {
   #testTable, #testTable > tbody, #testTable > tbody > tr { width: 100%; }
   
   #list2 > .list-group-item {
-    width: 100%;
+    width: 100%;  
     margin: 0;
   }
   

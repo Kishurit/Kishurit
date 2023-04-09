@@ -9,7 +9,6 @@ export default function UI(props) {
   const [index, setIndex] = useState (0)
   const [searchData, setSearchData] = useState()
   const [searchText, setSearchText] = useState("")
-  const [check1, setCheck1] = useState (false)
   const [location, setLocation] = useState ("")
 
   const AdjustNum = (num) => {
@@ -33,8 +32,7 @@ export default function UI(props) {
   const SearchInData = (e) => {
     e.preventDefault();
     
-    var flags = "dug" + ((!check1) ? "i" : ''); 
-    var regEx = new RegExp (searchText, flags)
+    var regEx = new RegExp (searchText, "dugi")
 
     var arr = data.reduce((a1, c1) => {
       return [...a1, ...c1.links.reduce((a2, c2) => {
@@ -61,9 +59,6 @@ export default function UI(props) {
 
   const getTotalNum = () => data.reduce((acc,element) => acc + getLinksLength(element.links), 0);
   
-
-  if (!data) return <p>Null</p>
-  //<h3 id= "title" style = {{ fontWeight: "lighter", textDecoration: "underline" }}>קטלוג אתרים של מקומות תעסוקה וחברות כוח אדם</h3>
   return (
     <React.Fragment>
     <div className="container text-center pull-center">       
@@ -81,14 +76,16 @@ export default function UI(props) {
           <input type="text" className="form-control" onChange={ e => setSearchText(e.target.value) }
           placeholder="חיפוש" value={searchText}/>
         </div>
-        <hr style = {{padding: "0", margin: "0 0 2% 0"}} />
-        <div className="checkbox text-right" style={{marginTop: "2%"}}>
-            <label htmlFor="inlineCheckbox1" className="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox1" value="option1" 
-            onChange={e=> setCheck1(e.target.checked)} />גודל אות</label>
-        </div>      
-        <div className="radio text-right" style={{margin: "2% auto 3% auto", direction: "ltr"}}>
+        <div className="radio text-right" style={{margin: "2% 2px 3% auto", }}>
             
+            <label className="radio-inline">
+            <input type="radio" name="inlineRadio" value=""
+            onClick={e=> setLocation("")} />הכל</label>
+    
+            <label className="radio-inline">
+            <input type="radio" name="inlineRadio" value="north" 
+            onClick={e=> setLocation("north")} />צפון</label>
+        
             <label className="radio-inline">
             <input type="radio" name="inlineRadio" value="south" 
             onClick={e=> setLocation("south")} />דרום</label>
@@ -97,13 +94,6 @@ export default function UI(props) {
             <input type="radio" name="inlineRadio" value="center" 
             onClick={e=> setLocation("center")} />מרכז</label>
 
-            <label className="radio-inline">
-            <input type="radio" name="inlineRadio" value="north" 
-            onClick={e=> setLocation("north")} />צפון</label>
-
-            <label className="radio-inline">
-            <input type="radio" name="inlineRadio" value=""
-            onClick={e=> setLocation("")} />הכל</label>
     
         </div>
 

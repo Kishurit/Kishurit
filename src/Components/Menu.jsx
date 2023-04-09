@@ -10,7 +10,7 @@ export default function Menu() {
           <a className="navbar-brand navbar-right" href="/" style={{ marginLeft: "0.5%", marginRight: "-,0.5%" }}>
             קישורית
           </a>
-          <div className="navbar-header">``
+          <div className="navbar-header">
             <button
               type="button"
               className="navbar-toggle collapsed"
