@@ -5,7 +5,8 @@ import React from 'react'
 
 export default function About() {
  
-  return (
+  return <h1 className='text-center'>הדף בבנייה</h1>
+  /*return (
     <React.Fragment>
     <div className="full-container pull-center">
         <h4 id="title" style={{ textAlign: 'center', textDecoration: 'underline', width: "100%"  }}>אודות האתר</h4>
@@ -40,6 +41,6 @@ export default function About() {
     
     </div>
     </React.Fragment>
-  )
+  )*/
 }
   

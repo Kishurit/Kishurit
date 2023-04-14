@@ -3,6 +3,9 @@ import "../style.css"
 
 import React, { useState, useEffect, useMemo } from 'react'
 import DataTable from "./DataTable3";
+import ContactForm from './ContactForm';
+import OrgForm from './OrgForm';
+import { isBrowser } from 'react-device-detect';
 
 export default function UI(props) {
   const data = useMemo (() => props.data, [props])
@@ -66,8 +69,8 @@ export default function UI(props) {
         <br style = {{padding: "0", margin: "0"}} />
         <h4 className="text-right">{ getTotalNum() } רשומות  </h4>
         
-        <div className="text-center pull-right col-lg-4 col-md-4 col-sm-12 col-xs-12">
 
+        <div className="text-center col-lg-4 col-md-4 col-lg-offset-8 col-md-offset-8 col-sm-12 col-xs-12">
         <div className="input-group input-group-sm" id="searchForm" style={{ direction: "ltr" }} >
           <span className="input-group-btn">
             <button className="btn btn-default text-left" type="button" onClick={SearchInData}>
@@ -106,8 +109,10 @@ export default function UI(props) {
         </select>
         </div>
 
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newOrg">הגשת עסק</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newMessage">שליחת הודעה למערכת</button>
 
-        <div id="dataTable" className="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-4"
+        <div id="dataTable" className="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right"
         style={{ marginTop: "2%"}}>
             <h3 style = {{ fontWeight: "lighter", margin: '0', padding: '.5em 0 .5em 0'}}>
             { (index !== -1) ? data[index].name: (searchData.links.length !== 0) ? "חיפוש: " + searchText: "לא נמצאו רשומות עבור: " + searchText } 
@@ -117,7 +122,7 @@ export default function UI(props) {
               <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={searchData}></DataTable>:
               <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={data[index]}></DataTable>              
             }
-          </div>
+        </div>
 
       </div>
 
@@ -128,6 +133,8 @@ export default function UI(props) {
             { getTotalNum() } רשומות
           </span>
       </footer> 
+
+      <ContactForm />
     </React.Fragment>
   )
 }

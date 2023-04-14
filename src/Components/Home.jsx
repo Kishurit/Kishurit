@@ -9,7 +9,7 @@ import data from "../JSON/db.json"
 
 export default function Home() {
   //const url = "https://raw.githubusercontent.com/romanbr87/links2/main/src/JSON/db2.json";
-  const {data, error, isPending, setData} = useFetch ('/', { key: 'romanbr87' }) 
+  //const {data, error, isPending, setData} = useFetch ('/', { key: 'romanbr87' }) 
 
   useEffect (() => {
     console.clear ();
@@ -37,7 +37,7 @@ export default function Home() {
   if (!data) return <React.Fragment />
   return (
     <React.Fragment>
-      <UI data={data}></UI>
+      <UI data={data.job}></UI>
     </React.Fragment>
   )
 }
