@@ -1,6 +1,6 @@
 import React from "react";
 //import sendMail from "../email";
-import { Mailer } from 'nodemailer-react'
+//import { Mailer } from 'nodemailer-react'
 import '../style/form.css';
 
 const ContactForm = () => {
