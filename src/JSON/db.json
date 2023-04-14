@@ -4277,6 +4277,26 @@
                     ]
                 },
                 {
+                    "cat": "BI & HeighTech",
+                    "links": [
+                        {
+                            "site_name": "Qlik",
+                            "link": "https://www.qlik.co.il/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94-%d7%91-qlik/",
+                            "link2": "",
+                            "facebook_link1": "",
+                            "facebook_link2": "",
+                            "facebook_link3": [],
+                            "linkedIn_link": "https://www.linkedin.com/company/qlikisrael/",
+                            "email1": "",
+                            "email2": "",
+                            "tel1": "",
+                            "tel2": "",
+                            "whatsapp": "",
+                            "location": ""
+                        }
+                    ]
+                },
+                {
                     "cat": "שונות בתחום ההייטק",
                     "links": [
                         {
@@ -5672,6 +5692,26 @@
             "name": "רשתות ועסקים בתחום המזון",
             "desc": "",
             "links": [
+                {
+                    "cat": "מסעדות",
+                    "links": [
+                        {
+                            "site_name": "japanika - ג'פניקה",
+                            "link": "https://www.japanika.net/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%92%d7%a4%d7%a0%d7%99%d7%a7%d7%94/",
+                            "link2": "",
+                            "facebook_link1": "",
+                            "facebook_link2": "",
+                            "facebook_link3": [],
+                            "linkedIn_link": "",
+                            "email1": "",
+                            "email2": "",
+                            "tel1": "",
+                            "tel2": "",
+                            "whatsapp": "",
+                            "location": ""
+                        }
+                    ]
+                },
                 {
                     "cat": "מזון מהיר",
                     "links": [

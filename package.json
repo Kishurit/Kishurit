@@ -1,6 +1,8 @@
 {
   "homepage": "http://links2.vercel.app/",
-  "name": "links",
+  "name": "Kishurit",
+  "description": "Index of employment websites",
+  "author": "Roman Braverman",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

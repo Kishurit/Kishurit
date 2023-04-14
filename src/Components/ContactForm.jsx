@@ -1,5 +1,8 @@
 import React from "react";
-import sendMail from "../email";
+//import sendMail from "../email";
+import { Mailer } from 'nodemailer-react'
+import '../style/form.css';
+
 const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,12 +16,14 @@ const ContactForm = () => {
 
     };
     console.log (details);
-    sendMail ();
+    //sendMail ();
   };
 
-  const Form = () =>
-  <React.Fragment>
-      <div className="form-group form-group-sm" style={{marginTop: "15px"}}>
+  return (
+    <form className="text-right" onSubmit={handleSubmit} >
+      <h3 className="text-center">לשלוח הודעה</h3>
+
+      <div className="form-group form-group-sm" style={{marginTop: "20px"}}>
           <input type="text" className="form-control" id="name" name="name" 
           placeholder="שם" />
       </div>
@@ -35,32 +40,11 @@ const ContactForm = () => {
 
       <div className="form-group form-group-sm">
       <textarea className="form-control" id="message" name="message" rows="5" 
-      placeholder="הודעה" required ></textarea>
+      placeholder="הודעה" required />
       </div>
 
-  </React.Fragment>
-
-  return (
-    <div id="newMessage" className="modal fade" role="dialog">
-      <div className="modal-dialog">
-       <div className="modal-content">
-          <div className="modal-body" style={{marginTop: "5px", paddingTop: '0', paddingBottom: '0'}}>
-          <form className="text-right" onSubmit={handleSubmit} >
-            <button type="button" className="close" data-dismiss="modal">&times;</button>
-            <h3 className="modal-title text-center">לשלוח הודעה</h3>
-            <small className="text-right modal-title">כתובת מייל והודעה חובה</small>
-              <Form />
-            <div className="btn-group" style={{paddingBottom: "10px"}}>
-              <button type="submit" className="btn btn-primary">לשלוח</button>
-              <button type="reset" className="btn btn-primary">לאתחל</button>
-              <button type="button" className="btn btn-primary" data-dismiss="modal">לסגור</button>
-            </div>
-          </form>
-
-        </div>
-      </div>
-    </div>
-    </div>
+      <button class="btn btn-primary btn-sm" type="submit" style={{marginTop: "0"}}>לשלוח</button>
+    </form>
   );
 };
 

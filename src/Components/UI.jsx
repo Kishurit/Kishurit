@@ -108,9 +108,23 @@ export default function UI(props) {
         }
         </select>
         </div>
+        
+        {isBrowser ? 
+        <div className='row'>
+        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12" style={{marginTop: "2em"}}>
+        <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+            <ContactForm />
+        </div>
 
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newOrg">הגשת עסק</button>
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newMessage">שליחת הודעה למערכת</button>
+        <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
+            <OrgForm />
+        </div>
+        </div>
+        </div>:
+        <React.Fragment>
+          <ContactForm />
+          <OrgForm />
+        </React.Fragment>}
 
         <div id="dataTable" className="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right"
         style={{ marginTop: "2%"}}>
@@ -134,7 +148,6 @@ export default function UI(props) {
           </span>
       </footer> 
 
-      <ContactForm />
     </React.Fragment>
   )
 }

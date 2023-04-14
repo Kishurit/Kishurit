@@ -1,4 +1,7 @@
-import '../style/OrgForm.css'
+import React from "react";
+//import sendMail from "../email";
+import '../style/form.css';
+
 const OrgForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,26 +24,28 @@ const OrgForm = () => {
           ...(tel1 && {tel1: tel1.value}),
           ...(tel2 && {tel2: tel2.value}),
           ...(whatsapp && {whatsapp: whatsapp.value}),
-          ...(region && {tel2: region.value}),
+          ...(region && {region: region.value}),
           
         };
         console.log (details);
     };
     
     return (
-    <form className="well text-right" onSubmit={handleSubmit} style={{ paddingTop: '0'}}>
+    <form className="well text-right" onSubmit={handleSubmit}>
         <h3 className="text-center">להגיש עסק חדש</h3>
 
         <div className="row">
         <div className="form-group form-group-sm">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <label forhtml="name"><span className="astrix">*</span>שם:</label>
-                <input type="text" className="form-control" id="name" name="name" required />
+                <input type="text" className="form-control" id="name" name="name"
+                value='רומן' required />
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <label forhtml="link1"><span className="astrix">*</span>קישור1:</label>
-                <input type="text" className="form-control" id="link1" name="link1" required />
+                <input type="text" className="form-control" id="link1" name="link1" 
+                value="facebook.com" required />
             </div>
         </div>
         </div>
@@ -118,7 +123,7 @@ const OrgForm = () => {
         <div className="newRow row">
         <div className="form-group form-group-sm">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="whatsapp">מספר וטסאפ:</label>
+                <label forhtml="whatsapp">מספר ווטסאפ:</label>
                 <input type="tel" className="form-control" id="whatsapp" name="whatsapp" />
             </div>
             
@@ -137,7 +142,7 @@ const OrgForm = () => {
 
         <div class="newRow form-group form-group-sm">
         <label forhtml="message"><span className="astrix">*</span>הודעה:</label>
-        <textarea class="form-control" id="message" name="message" rows="5" required ></textarea>
+        <textarea class="form-control" id="message" name="message" rows="5" />
         </div>
 
         <button class="btn btn-primary btn-sm" type="submit" style={{marginTop: "0"}}>לשלוח</button>

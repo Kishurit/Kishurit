@@ -2,6 +2,10 @@
     margin-top: 5px;
 }
 
+.well {
+    padding-top: 0px;
+}
+
 .row {
     direction: 'ltr';
 }
