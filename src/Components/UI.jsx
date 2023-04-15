@@ -3,9 +3,6 @@ import "../style.css"
 
 import React, { useState, useEffect, useMemo } from 'react'
 import DataTable from "./DataTable3";
-import CF from './CF';
-import OrgForm from './OrgForm';
-import { isBrowser } from 'react-device-detect';
 
 export default function UI(props) {
   const data = useMemo (() => props.data, [props])
@@ -109,23 +106,6 @@ export default function UI(props) {
         </select>
         </div>
         
-        {false && (isBrowser ? 
-        <div className='row'>
-        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12" style={{marginTop: "2em"}}>
-        <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-            <CF />
-        </div>
-
-        <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
-            <OrgForm />
-        </div>
-        </div>
-        </div>:
-        <React.Fragment>
-          <CF />
-          <OrgForm />
-        </React.Fragment>)}
-
         <div id="dataTable" className="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right"
         style={{ marginTop: "2%"}}>
             <h3 style = {{ fontWeight: "lighter", margin: '0', padding: '.5em 0 .5em 0'}}>
