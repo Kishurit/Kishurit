@@ -1,15 +1,15 @@
-
 import React, { useState, useEffect } from 'react'
 import useFetch from '../hooks/useFetch'
 import UI from "./UI"
 
 import '../App.css'
 import "../style.css"
-import data from "../JSON/db.json"
+//import data from "../JSON/db.json"
 
 export default function Home() {
   //const url = "https://raw.githubusercontent.com/romanbr87/links2/main/src/JSON/db2.json";
-  //const {data, error, isPending, setData} = useFetch ('/', { key: 'romanbr87' }) 
+  const {data, error, isPending, setData} = useFetch ('/', { key: 'romanbr87' }) 
+  //const data = {};
 
   useEffect (() => {
     console.clear ();
@@ -32,12 +32,18 @@ export default function Home() {
         return node
       }) 
       console.log (job1);
-    }*/
-  }, [])
+    }
+
+    alert (parseInt("12AA2A"))*/
+    /*var data1 = JSON.parse(JSON.stringify(data));
+    data1 =  data1.job[0].links.reduce ((acc1, element1) =>  acc1 + element1.links.length, 0)*/
+  
+    console.log (data);
+  }, [data])
   if (!data) return <React.Fragment />
   return (
     <React.Fragment>
-      <UI data={data.job}></UI>
+      <UI data={data}></UI>
     </React.Fragment>
   )
 }
