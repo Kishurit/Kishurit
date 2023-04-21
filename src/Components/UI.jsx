@@ -1,15 +1,17 @@
 import '../App.css'
 import "../style.css"
 
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useMemo, useRef } from 'react'
 import DataTable from "./DataTable3";
+import ReportForm from './ReportForm';
 
 export default function UI(props) {
   const data = useMemo (() => props.data, [props])
   const [index, setIndex] = useState (0)
   const [searchData, setSearchData] = useState()
-  const [searchText, setSearchText] = useState("")
   const [location, setLocation] = useState ("")
+  const searchText = useRef();
+  const [name, setName] = useState ('')
 
   const AdjustNum = (num) => {
      num++;
@@ -32,7 +34,7 @@ export default function UI(props) {
   const SearchInData = (e) => {
     e.preventDefault();
     
-    var regEx = new RegExp (searchText, "dugi")
+    var regEx = new RegExp (searchText.current.value, "dugi")
 
     var arr = data.reduce((a1, c1) => {
       return [...a1, ...c1.links.reduce((a2, c2) => {
@@ -57,14 +59,14 @@ export default function UI(props) {
     setSearchData ({links: arr});
   }
 
-  const getTotalNum = () => data.reduce((acc,element) => acc + getLinksLength(element.links), 0);
+  const getTotalNum = data.reduce((acc,element) => acc + getLinksLength(element.links), 0);
   
   return (
     <React.Fragment>
     <div className="container text-center pull-center">       
         <h2 className="text-center title" style = {{ textDecoration: "underline" }}>קישורית</h2>
         <br style = {{padding: "0", margin: "0"}} />
-        <h4 className="text-right">{ getTotalNum() } רשומות  </h4>
+        <h4 className="text-right">{ getTotalNum } רשומות  </h4>
         
 
         <div className="text-center col-lg-4 col-md-4 col-lg-offset-8 col-md-offset-8 col-sm-12 col-xs-12">
@@ -73,8 +75,8 @@ export default function UI(props) {
             <button className="btn btn-default text-left" type="button" onClick={SearchInData}>
             <i className="glyphicon glyphicon-search"></i></button>
           </span>
-          <input type="text" className="form-control" onChange={ e => setSearchText(e.target.value) }
-          placeholder="חיפוש" value={searchText}/>
+          <input type="text" className="form-control" ref={searchText}
+          placeholder="חיפוש" />
         </div>
         <div className="radio text-right" style={{margin: "2% 2px 3% auto", }}>
             
@@ -109,12 +111,12 @@ export default function UI(props) {
         <div id="dataTable" className="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right"
         style={{ marginTop: "2%"}}>
             <h3 style = {{ fontWeight: "lighter", margin: '0', padding: '.5em 0 .5em 0'}}>
-            { (index !== -1) ? data[index].name: (searchData.links.length !== 0) ? "חיפוש: " + searchText: "לא נמצאו רשומות עבור: " + searchText } 
+            { (index !== -1) ? data[index].name: (searchData.links.length !== 0) ? "חיפוש: " + searchText.current.value: "לא נמצאו רשומות עבור: " + searchText.current.value } 
             </h3>
             {
               (index === -1) ?  
-              <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={searchData}></DataTable>:
-              <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={data[index]}></DataTable>              
+              <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={searchData} setName={setName} />:
+              <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={data[index]} setName={setName} />              
             }
         </div>
 
@@ -124,10 +126,10 @@ export default function UI(props) {
       style={{ margin: "0 0 0 0", padding:"auto", borderRadius: '0', border: 'none', marginTop: "10em"}}>
           
         <span style={{ padding: 'auto', margin: 'auto'}}>
-            { getTotalNum() } רשומות
+            { getTotalNum } רשומות
           </span>
       </footer> 
-
+      <ReportForm name={name}/>
     </React.Fragment>
   )
 }

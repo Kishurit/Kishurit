@@ -1,35 +1,4 @@
-import React from "react";
-//import sendMail from "../email";
-import '../style/form.css';
-
-const OrgForm = () => {
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.clear();
-
-        const { name, link1, link2, link3, facebook_link1, facebook_link2,
-        linkedIn_link, instagram_link, email1, email2, tel1, tel2, whatsapp, region } = e.target.elements;
-        
-        let details = {
-          name: name.value,
-          link1: link1.value,
-          ...(link2 && {link2: link2.value}),
-          ...(link3 && {link3: link3.value}),
-          ...(facebook_link1 && {facebook_link1: facebook_link1.value}),
-          ...(facebook_link2 && {facebook_link2: facebook_link2.value}),
-          ...(linkedIn_link && {linkedIn_link: linkedIn_link.value}),
-          ...(instagram_link && {instagram_link: instagram_link.value}),
-          ...(email1 && {email1: email1.value}),
-          ...(email2 && {email2: email2.value}),
-          ...(tel1 && {tel1: tel1.value}),
-          ...(tel2 && {tel2: tel2.value}),
-          ...(whatsapp && {whatsapp: whatsapp.value}),
-          ...(region && {region: region.value}),
-          
-        };
-        console.log (details);
-    };
-    
+const DesktopOrgForm = ({handleSubmit}) => {
     return (
     <form className="well text-right" onSubmit={handleSubmit}>
         <h3 className="text-center">להגיש עסק חדש</h3>
@@ -38,14 +7,12 @@ const OrgForm = () => {
         <div className="form-group form-group-sm">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <label forhtml="name"><span className="astrix">*</span>שם:</label>
-                <input type="text" className="form-control" id="name" name="name"
-                value='רומן' required />
+                <input type="text" className="form-control" id="name" name="name" required />
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <label forhtml="link1"><span className="astrix">*</span>קישור1:</label>
-                <input type="text" className="form-control" id="link1" name="link1" 
-                value="facebook.com" required />
+                <input type="text" className="form-control" id="link1" name="link1" required />
             </div>
         </div>
         </div>
@@ -140,14 +107,14 @@ const OrgForm = () => {
         </div>
         </div>
 
-        <div class="newRow form-group form-group-sm">
+        <div className="newRow form-group form-group-sm">
         <label forhtml="message"><span className="astrix">*</span>הודעה:</label>
-        <textarea class="form-control" id="message" name="message" rows="5" />
+        <textarea className="form-control" id="message" name="message" rows="5" />
         </div>
 
-        <button class="btn btn-primary btn-sm" type="submit" style={{marginTop: "0"}}>לשלוח</button>
+        <button className="btn btn-primary btn-sm" type="submit" style={{marginTop: "0"}}>לשלוח</button>
     </form>
-    );
-};
+    )
+}
 
-export default OrgForm;
+export default DesktopOrgForm

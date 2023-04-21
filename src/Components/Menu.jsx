@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 export default function Menu() {
-
   return (
     <>
       <nav className="navbar navbar-inverse navbar-fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand navbar-right" href="/" style={{ marginLeft: "0.5%", marginRight: "-,0.5%" }}>
+          <Link className="navbar-brand navbar-right" to="/" style={{ marginLeft: "0.5%", marginRight: "-,0.5%" }}>
             קישורית
-          </a>
+          </Link>
           <div className="navbar-header">
             <button
               type="button"
@@ -27,10 +25,13 @@ export default function Menu() {
 
           <div className="collapse navbar-collapse" id="navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a href="/about" style={{fontSize: '1.5em'}}>אודות</a>
+                <li>
+                <Link to="/about" style={{fontSize: '1.5em'}}>אודות</Link>
               </li>
-            </ul>
+              <li>
+                <Link to="/neworg" style={{fontSize: '1.5em'}}>הגשת עסק חדש</Link>
+              </li>
+          </ul>
           </div>
         </div>
       </nav>

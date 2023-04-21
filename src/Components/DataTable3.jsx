@@ -56,6 +56,8 @@ return (
                         <a className="text-right" href={e2.instagram_link} >דף אינסטגרם</a>
                         }
 
+                        <a href="#" data-toggle="modal" data-target="#reportModal"
+                        onClick={() => props.setName(e2.site_name)}>דיווח</a>
                     </span>
                 })
             }
