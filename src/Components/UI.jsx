@@ -1,7 +1,8 @@
 import '../App.css'
-import "../style.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React, { useState, useMemo, useRef } from 'react'
+import { Container, Button, InputGroup, FormControl, Radio, Form, Col, Row } from 'react-bootstrap';
 import DataTable from "./DataTable3";
 import ReportForm from './ReportForm';
 
@@ -10,6 +11,7 @@ export default function UI(props) {
   const [index, setIndex] = useState (0)
   const [searchData, setSearchData] = useState()
   const [location, setLocation] = useState ("")
+  const [showModal, setShowModal] = useState (false)
   const searchText = useRef();
   const [name, setName] = useState ('')
 
@@ -33,7 +35,7 @@ export default function UI(props) {
 
   const SearchInData = (e) => {
     e.preventDefault();
-    
+    if (searchText.current.value.trim() === '') alert ("הכנס ערך");
     var regEx = new RegExp (searchText.current.value, "dugi")
 
     var arr = data.reduce((a1, c1) => {
@@ -63,73 +65,66 @@ export default function UI(props) {
   
   return (
     <React.Fragment>
-    <div className="container text-center pull-center">       
+    <Container className='uicontainer'>
         <h2 className="text-center title" style = {{ textDecoration: "underline" }}>קישורית</h2>
         <br style = {{padding: "0", margin: "0"}} />
-        <h4 className="text-right">{ getTotalNum } רשומות  </h4>
+
+        <Row className="justify-content-right mb-2">
+          <Col lg={4} md={4} sm={12} xs={12} className="text-center">
+          <InputGroup size="sm" style={{ direction: "ltr" }}>
+            <Button variant="outline-secondary" onClick={SearchInData}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+            </Button>
+            <FormControl type="text" size="sm" placeholder="חיפוש" ref={searchText} />
+          </InputGroup>
+          </Col>
+        </Row>
+        <Row className="justify-content-right mb-2">
+          <Col lg={4} md={4} sm={12} xs={12} className="text-center">
+            <Form style={{marginRight: "-15px"}}>
+              <Form.Check inline type="radio" label="הכל" name="inlineRadio" value="" onClick={e => setLocation("")} />
+              <Form.Check inline type="radio" label="צפון" name="inlineRadio" value="north" onClick={e => setLocation("north")} />
+              <Form.Check inline type="radio" label="דרום" name="inlineRadio" value="south" onClick={e => setLocation("south")} />
+              <Form.Check inline type="radio" label="מרכז" name="inlineRadio" value="center" onClick={e => setLocation("center")} />
+            </Form>
+          </Col>
+        </Row>
+        <Row className="justify-content-right">
+          <Col lg={4} md={4} sm={12} xs={12} className="text-center">
+            <Form.Select size='sm' value={index} onChange={e => setIndex(e.target.value)}>
+            {data.map((e, i) => {
+            return <option key={i + 1} value={i}>{AdjustNum(i) + ". " + e.name + " - " + getLinksLength(e.links) + " קישורים"}</option>
+            })}
+            </Form.Select>
+          </Col>
+        </Row>
         
-
-        <div className="text-center col-lg-4 col-md-4 col-lg-offset-8 col-md-offset-8 col-sm-12 col-xs-12">
-        <div className="input-group input-group-sm" id="searchForm" style={{ direction: "ltr" }} >
-          <span className="input-group-btn">
-            <button className="btn btn-default text-left" type="button" onClick={SearchInData}>
-            <i className="glyphicon glyphicon-search"></i></button>
-          </span>
-          <input type="text" className="form-control" ref={searchText}
-          placeholder="חיפוש" />
-        </div>
-        <div className="radio text-right" style={{margin: "2% 2px 3% auto", }}>
-            
-            <label className="radio-inline">
-            <input type="radio" name="inlineRadio" value=""
-            onClick={e=> setLocation("")} />הכל</label>
-    
-            <label className="radio-inline">
-            <input type="radio" name="inlineRadio" value="north" 
-            onClick={e=> setLocation("north")} />צפון</label>
-        
-            <label className="radio-inline">
-            <input type="radio" name="inlineRadio" value="south" 
-            onClick={e=> setLocation("south")} />דרום</label>
-    
-            <label className="radio-inline">
-            <input type="radio" name="inlineRadio" value="center" 
-            onClick={e=> setLocation("center")} />מרכז</label>
-
-    
-        </div>
-
-        <select className="form-control" id="sel" onChange={ e => setIndex(e.target.value) } >
+        <Row>
+        <Col lg={8} md={8} sm={12} xs={12} className="pull-right" style={{ marginTop: "2%" }}>
+        <h3 className="text-center">
+        { (index !== -1) ? data[index].name: (searchData.links.length !== 0) ? "חיפוש: " + searchText.current.value: "לא נמצאו רשומות עבור: " + searchText.current.value } 
+        </h3>
         {
-          data.map ((e, i) => {
-            return <option key={i+1} value={i}>{AdjustNum(i) + ". " + e.name + " - " + getLinksLength(e.links) + " קישורים" }</option> 
-          })
+          (index === -1) ?  
+          <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={searchData} setName={setName} 
+          setShowModal={setShowModal}/>:
+          <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={data[index]} setName={setName} 
+          setShowModal={setShowModal}/>
         }
-        </select>
-        </div>
-        
-        <div id="dataTable" className="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right"
-        style={{ marginTop: "2%"}}>
-            <h3 style = {{ fontWeight: "lighter", margin: '0', padding: '.5em 0 .5em 0'}}>
-            { (index !== -1) ? data[index].name: (searchData.links.length !== 0) ? "חיפוש: " + searchText.current.value: "לא נמצאו רשומות עבור: " + searchText.current.value } 
-            </h3>
-            {
-              (index === -1) ?  
-              <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={searchData} setName={setName} />:
-              <DataTable AdjustNum={AdjustNum} soryByAtrr={soryByAtrr} data={data[index]} setName={setName} />              
-            }
-        </div>
+        </Col>
+      </Row>
+        <ReportForm name={name} showModal={showModal} setShowModal={setShowModal}/>
+      </Container>
 
-      </div>
-
-      <footer className="well well-sm panel-footer text-right navbar-fixed-bottom" 
-      style={{ margin: "0 0 0 0", padding:"auto", borderRadius: '0', border: 'none', marginTop: "10em"}}>
-          
-        <span style={{ padding: 'auto', margin: 'auto'}}>
-            { getTotalNum } רשומות
-          </span>
-      </footer> 
-      <ReportForm name={name}/>
+      <Container fluid>
+        <Row className="fixed-bottom bg-light">
+          <Col style={{margin: '5px 0 5px 0'}}>
+              <span style={{marginRight: '2em'}}>{getTotalNum} רשומות</span>
+          </Col>
+        </Row>
+      </Container>
     </React.Fragment>
   )
 }

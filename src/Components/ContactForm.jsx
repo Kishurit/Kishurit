@@ -1,9 +1,7 @@
 import React from "react";
 import { isBrowser } from "react-device-detect";
 import { getPost } from "../api";
-//import sendMail from "../email";
-//import { Mailer } from 'nodemailer-react'
-import '../style/form.css';
+import { Form, Button, Col, Well } from 'react-bootstrap';
 
 const ContactForm = () => {
   const handleSubmit = async (e) => {
@@ -27,37 +25,39 @@ const ContactForm = () => {
     return true;
   };
 
+  const MyForm = ({style}) =>
+    <Form onSubmit={handleSubmit} className={`text-right ${isBrowser && 'bg-light'}`} style={style}>
+    <h3 className="text-center">לשלוח הודעה</h3>
+
+    <Form.Group className="mb-2" as={Col}>
+      <Form.Control type="text" size='sm' id="subject" name="subject" placeholder="כותרת" />
+    </Form.Group>
+    
+    <Form.Group className="mb-2" as={Col}>
+      <Form.Control type="text" size='sm' id="name" name="name" placeholder="שם" />
+    </Form.Group>
+
+    <Form.Group className="mb-2" as={Col}>
+      <Form.Control type="email" size='sm' id="email" name="email" placeholder="כתובת מייל" required />
+    </Form.Group>
+
+    <Form.Group className="mb-2" as={Col}>
+      <Form.Control type="tel" size='sm' id="tel" name="tel" placeholder="מספר טלפון"/>
+    </Form.Group>
+
+    <Form.Group className="mb-2" as={Col}>
+      <Form.Control as="textarea" size='sm' id="message" name="message" rows="5" placeholder="הודעה" required />
+    </Form.Group>
+
+    <Button variant="primary" type="submit" style={{marginTop: "0"}}>לשלוח</Button>
+  </Form>
+
+
   return (
-    <form className={"text-right " + (isBrowser && 'well')} onSubmit={handleSubmit} >
-      <h3 className="text-center">לשלוח הודעה</h3>
-
-      <div className="form-group form-group-sm" style={{marginTop: "20px"}}>
-          <input type="text" className="form-control" id="subject" name="subject" 
-          placeholder="כותרת" />
-      </div>
-      
-      <div className="form-group form-group-sm" style={{marginTop: "20px"}}>
-          <input type="text" className="form-control" id="name" name="name" 
-          placeholder="שם" />
-      </div>
-
-      <div className="form-group form-group-sm">
-          <input type="email" className="form-control" id="email" name="email" 
-          placeholder="כתובת מייל" required />
-      </div>
-
-      <div className="form-group form-group-sm">
-          <input type="tel" className="form-control" id="tel" name="tel" 
-          placeholder="מספר טלפון"/>
-      </div>
-
-      <div className="form-group form-group-sm">
-      <textarea className="form-control" id="message" name="message" rows="5" 
-      placeholder="הודעה" required />
-      </div>
-
-      <button className="btn btn-primary btn-sm" type="submit" style={{marginTop: "0"}}>לשלוח</button>
-    </form>
+    <React.Fragment>
+    { isBrowser ? <MyForm style={{padding: '4% 5%', border: '1px solid silver', borderRadius: '5px'}} />:
+    <MyForm />} 
+    </React.Fragment>
   );
 };
 

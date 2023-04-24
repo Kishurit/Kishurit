@@ -7,7 +7,6 @@ export const serverURL = (url) => `http://localhost:8080${url}`;
 export const Provider = context.Provider;
 export const Consumer = context.Consumer;
 
-
 export const fetchData =  async (url, method='POST', dataForServer = undefined) => {
     const requestOptions = {
         method: method,

@@ -1,119 +1,96 @@
+import { Row, Col, Form, InputGroup, Button } from 'react-bootstrap';
+
+//<Form.Label htmlFor="name"><span className="astrix">*</span>שם:</Form.Label>
+
 const DesktopOrgForm = ({handleSubmit}) => {
     return (
-    <form className="well text-right" onSubmit={handleSubmit}>
-        <h3 className="text-center">להגיש עסק חדש</h3>
+    <Form className="text-right well" onSubmit={handleSubmit}>
+        <h3 className="text-center mb-3">להגיש עסק חדש</h3>
 
-        <div className="row">
-        <div className="form-group form-group-sm">
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="name"><span className="astrix">*</span>שם:</label>
-                <input type="text" className="form-control" id="name" name="name" required />
-            </div>
+        <Row>
+            <Form.Group controlId="name" className="mb-3" as={Col} lg={6} md={6}>
+                <Form.Control size='sm' type="text" name="name" required placeholder="*שם"/>
+            </Form.Group>
 
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="link1"><span className="astrix">*</span>קישור1:</label>
-                <input type="text" className="form-control" id="link1" name="link1" required />
-            </div>
-        </div>
-        </div>
+            <Form.Group controlId="link1" className="mb-3" as={Col} lg={6} md={6}>
+                <Form.Control size='sm' type="text" name="link1" required placeholder="*קישור1"/>
+            </Form.Group>
+        </Row>
 
-        <div className="newRow row">
-        <div className="form-group form-group-sm">
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="link2">קישור2:</label>
-                <input type="text" className="form-control" id="link2" name="link2" />
-            </div>
-            
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="link3">קישור3:</label>
-                <input type="text" className="form-control" id="link3" name="link3" />
-            </div>
-        </div>
-        </div>
+        <Row>
+            <Form.Group controlId="link2" className="mb-3" as={Col} lg={6} md={6}>
+                <Form.Control size='sm' type="text" name="link2" placeholder="קישור2" />
+            </Form.Group>
 
-        <div className="newRow row">
-        <div className="form-group form-group-sm">
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="facebook_link1">קישור פייסבוק1:</label>
-                <input type="text" className="form-control" id="facebook_link1" name="facebook_link1" />
-            </div>
-            
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="facebook_link2">קישור פייסבוק2:</label>
-                <input type="text" className="form-control" id="facebook_link2" name="facebook_link2" />
-            </div>
-        </div>
-        </div>
+            <Form.Group controlId="link3" className="mb-3" as={Col} lg={6} md={6}>
+                <Form.Control size='sm' type="text" name="link3" placeholder="קישור3"/>
+            </Form.Group>
+        </Row>
 
-        <div className="newRow row">
-        <div className="form-group form-group-sm">
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="linkedIn_link">קישור לינקדאין:</label>
-                <input type="text" className="form-control" id="linkedIn_link" name="linkedIn_link" />
-            </div>
-            
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="instagram_link">קישור אינסטגרם:</label>
-                <input type="text" className="form-control" id="instagram_link" name="instagram_link" />
-            </div>
-        </div>
-        </div>
+        <Row>
+            <Form.Group controlId="facebook_link1" className="mb-3" as={Col} lg={6} md={6}>
+            <Form.Control size='sm' type="text" name="facebook_link1" placeholder="קישור לפייסבוק"/>
+            </Form.Group>
 
-        <div className="newRow row">
-        <div className="form-group form-group-sm">
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="email1">כתובת מייל1:</label>
-                <input type="email" className="form-control" id="email1" name="email1" />
-            </div>
-            
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="email2">כתובת מייל2:</label>
-                <input type="email" className="form-control" id="email2" name="email2" />
-            </div>
-        </div>
-        </div>
+            <Form.Group controlId="facebook_link2" className="mb-3" as={Col} lg={6} md={6}>
+            <Form.Control size='sm' type="text" name="facebook_link2" placeholder="קישור לפייסבוק2"/>
+            </Form.Group>
+        </Row>
 
-        <div className="newRow row">
-        <div className="form-group form-group-sm">
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="tel1">מספר טלפון1:</label>
-                <input type="tel" className="form-control" id="tel1" name="tel1" />
-            </div>
-            
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="tel2">מספר טלפון2:</label>
-                <input type="tel" className="form-control" id="tel2" name="tel2" />
-            </div>
-        </div>
-        </div>
+        <Row>
+        <Form.Group controlId="linkedIn_link" className="mb-3" as={Col} lg={6} md={6}>
+            <Form.Control size='sm' type="text" name="linkedIn_link" placeholder="קישור ללינקדאין"/>
+        </Form.Group>
 
-        <div className="newRow row">
-        <div className="form-group form-group-sm">
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="whatsapp">מספר ווטסאפ:</label>
-                <input type="tel" className="form-control" id="whatsapp" name="whatsapp" />
-            </div>
-            
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <label forhtml="tel2">אזור גאוגרפי:</label>
-                <select className="form-control" id="region" name="region">
-                    <option value="">הכל</option>
-                    <option value="north">צפון</option>
-                    <option value="center">מרכז</option>
-                    <option value="south">דרום</option>
-                    <option value="south">יו"ש</option>
-            </select>
-            </div>
-        </div>
-        </div>
+        <Form.Group controlId="instagram_link" className="mb-3" as={Col} lg={6} md={6}>
+            <Form.Control size='sm' type="text" name="instagram_link" placeholder="קישור לאינסטגרם"/>
+        </Form.Group>
+        </Row>
 
-        <div className="newRow form-group form-group-sm">
-        <label forhtml="message"><span className="astrix">*</span>הודעה:</label>
-        <textarea className="form-control" id="message" name="message" rows="5" />
-        </div>
 
-        <button className="btn btn-primary btn-sm" type="submit" style={{marginTop: "0"}}>לשלוח</button>
-    </form>
+        <Row>
+        <Form.Group className="mb-3" controlId="email1" as={Col} lg={6} md={6}>
+            <Form.Control size='sm' type="email" name="email1" placeholder="אימייל"/>
+        </Form.Group>
+
+        <Form.Group controlId="email2" className="mb-3" as={Col} lg={6} md={6}>
+            <Form.Control size='sm' type="email" name="email2" placeholder="אימייל2"/>
+        </Form.Group>
+        </Row>
+        
+        <Row>
+        <Form.Group className="mb-3" as={Col} lg={6} md={6} controlId="tel1">
+            <Form.Control size='sm' type="tel" name="tel1" placeholder="טלפון"/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" as={Col} lg={6} md={6} controlId="tel2">
+            <Form.Control size='sm' type="tel" name="tel2" placeholder="טלפון2"/>
+        </Form.Group>
+        </Row>
+
+        <Row>
+        <Form.Group className="mb-3" controlId="whatsapp" as={Col} lg={6} md={6}>
+            <Form.Control size='sm' type="tel" placeholder="מספר ווטסאפ" name="whatsapp" />
+        </Form.Group>
+        
+        <Form.Group className="mb-3" controlId="region" as={Col} lg={6} md={6}>
+            <Form.Select size='sm' defaultValue="" name="region">
+                <option value="">הכל</option>
+                <option value="north">צפון</option>
+                <option value="center">מרכז</option>
+                <option value="south">דרום</option>
+                <option value="yosh">יו"ש</option>
+            </Form.Select>
+        </Form.Group>
+        </Row>
+
+        <Row>
+        <Form.Group className="mb-3" as={Col}>
+        <Form.Control size='sm' as="textarea" name="message" rows={6} />
+        </Form.Group>
+        </Row>
+        <Button variant="primary" size="sm" type="submit">לשלוח</Button>
+    </Form>
     )
 }
 

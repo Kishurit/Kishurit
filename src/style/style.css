@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+@import url(normalize.css);
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-align: right; 
+    letter-spacing: 1px;			
+    direction: rtl;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 100;
+
+}
+
+.pull-center {
+  margin-right: auto;
+  margin-left: auto;
+  float: none; 
+}
+
+textarea { resize: unset; }
+
+.uicontainer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+/*----------------------------------------------------------------------------*/
+
+a.navbar-right, div ul li a { font-size: larger;}
+.navbar { padding-top: '2px'; padding-bottom: '2px'; }
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+
+/*----------------------------------------------------------------------------*/
+
+.panel-heading, .panel, .panel-body { padding: 0; margin: 0; }
+
+#panelForm { 	
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+  box-shadow: none;
+}
+
+
+/*----------------------------------------------------------------------------*/
+#testTable { width: 100% }
+th, td { text-align: center; width: auto; }
+
+.nameCell { width: 25%; text-align: right;}
+.numberCell { width: 5%; text-align: right; }
+
+tbody > tr:first-child > td { border-top: solid silver; }
+
+.borderTop { border-top: 2px   solid; }
+.borderCat { border: 2px solid lightgray; }
+.cat { font-weight: bold; }
+/*----------------------------------------------------------------------------*/
+
+#list1 > .list-group-item {
+  width: 100%;
+  margin: 0;
+  padding: 0 1% 0 2%;
+  height: 2em;
+}
+
+h1,h2,h3,h4 { letter-spacing: 0.09em; border: none;}
+
+/*.list-group-item { border-radius: 0; width: 100%; }*/
+.list-group-item a { 
+    padding: 0 2% 0 2%; 
+    border-left: 1px solid black; 
+}
+.list-group-item a:last-child { border: none; }
+.list-group-item a:nth-last-child(2) { border-left: 2px solid black; }
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+  .uicontainer {
+    padding-top: 2px;
+    padding-bottom: 1em;
+  }
+
+  /*---------------------------------------------------------------------------------------------------------------------------*/
+
+  #title { font-size: 1.6em; }
+
+  #testTable, #testTable > tbody, #testTable > tbody > tr { width: 100%; }
+   
+  .panel-heading > h3 { font-size: 1.6em; } 
+
+  .list-group-item a { 
+    padding: 0 2% 0 2%; 
+  }
+
+}
+

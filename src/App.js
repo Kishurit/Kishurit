@@ -7,9 +7,13 @@ import { useOnlineNotification } from './hooks/useOnline'
 import Home from './Components/Home.jsx'
 import About from './Components/About.jsx'
 import Menu from './Components/Menu';
-import './App.css'
-import "./style.css"
 import OrgForm from './Components/orgform/OrgForm.jsx';
+
+import './App.css'
+import "./style/style.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-notifications/lib/notifications.css';
+
 
 export default function App(props) {
   

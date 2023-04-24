@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import useFetch from '../hooks/useFetch'
 
 import '../App.css'
-import "../style.css"
+import "../style/style.css"
 import UI from "./UI"
 
 //import data from "../JSON/db.json"

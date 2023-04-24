@@ -1,40 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+import { isBrowser } from "react-device-detect";
+
 export default function Menu() {
   return (
     <>
-      <nav className="navbar navbar-inverse navbar-fixed-top">
-        <div className="container-fluid">
-          <Link className="navbar-brand navbar-right" to="/" style={{ marginLeft: "0.5%", marginRight: "-,0.5%" }}>
-            קישורית
-          </Link>
-          <div className="navbar-header">
-            <button
-              type="button"
-              className="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#navbar-collapse"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
-          </div>
-
-          <div className="collapse navbar-collapse" id="navbar-collapse">
-            <ul className="nav navbar-nav navbar-right">
-                <li>
-                <Link to="/about" style={{fontSize: '1.5em'}}>אודות</Link>
-              </li>
-              <li>
-                <Link to="/neworg" style={{fontSize: '1.5em'}}>הגשת עסק חדש</Link>
-              </li>
-          </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar bg="dark" variant="dark" expand="sm" fixed="top" style={{ fontSize: '1.2rem' }}>
+        <Container>
+          <Navbar.Brand href="/" className="text-center" style={{fontSize: '1.2rem', paddingLeft: '5px'}}>
+            דף הבית
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link as={Link} to="/neworg">הגשת עסק חדש</Nav.Link>
+              <Nav.Link as={Link} to="/about">אודות</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
   );
 }
