@@ -1,4 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
-Allow:
+Allow: /
+Allow: /about/
+Allow: /neworg/
+
+Sitemap: https://kishurit.vercel.app/Sitemap.xml
