@@ -3,7 +3,7 @@ import useFetch from '../hooks/useFetch'
 
 import '../App.css'
 import "../style/style.css"
-import UI from "./UI"
+import DataPage from "./datapage/DataPage"
 
 //import data from "../JSON/db.json"
 
@@ -44,7 +44,7 @@ export default function Home() {
   if (!data) return <React.Fragment />
   return (
     <React.Fragment>
-      <UI data={data}></UI>
+      <DataPage data={data} />
     </React.Fragment>
   )
 }

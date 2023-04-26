@@ -47,13 +47,12 @@ body {
 textarea { resize: unset; }
 
 .uicontainer {
-    padding-top: 1em;
-    padding-bottom: 1em;
+  margin-top: 49px;
+  padding-bottom: 1em;
 }
 /*----------------------------------------------------------------------------*/
 
 a.navbar-right, div ul li a { font-size: larger;}
-.navbar { padding-top: '2px'; padding-bottom: '2px'; }
 
 .well {
   min-height: 20px;
@@ -113,7 +112,7 @@ h1,h2,h3,h4 { letter-spacing: 0.09em; border: none;}
 
 @media only screen and (max-width: 768px) {
   .uicontainer {
-    padding-top: 2px;
+    margin-top: 57px;
     padding-bottom: 1em;
   }
 

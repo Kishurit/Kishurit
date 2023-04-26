@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { getPost } from "../api";
+import { getPost } from "../../api";
 import { Modal, Button, ButtonGroup } from 'react-bootstrap';
 
 const ReportForm = ({name, showModal, setShowModal}) => {
@@ -42,7 +42,7 @@ const ReportForm = ({name, showModal, setShowModal}) => {
         </Modal.Body>
         <Modal.Footer>
           <ButtonGroup aria-label="Buttons" style={{direction:'ltr'}}>
-          <Button variant="secondary" className="justify-content-end" closeButton onClick={()=> {
+          <Button variant="secondary" className="justify-content-left" closeButton onClick={()=> {
             msgRef.current.value='';
             setShowModal(false);
           }}>לסגור</Button>

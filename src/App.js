@@ -24,7 +24,6 @@ export default function App(props) {
       <Router forceRefresh={false} basename='/' history={history}>
         <NotificationContainer/>
         <Menu/>
-        <div style={{marginTop: "50px"}}>
         <Route render = {({ location }) => (
         <Switch location = { location }>
           <Route exact path='/' component={()=>{return <Home />}}/>
@@ -33,7 +32,6 @@ export default function App(props) {
           <Route path='*' component={()=>{return <p>Null</p> }} status={404}/>
         </Switch>
         )} />
-        </div>
       </Router>
   )
 }
