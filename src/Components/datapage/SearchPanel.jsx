@@ -1,11 +1,11 @@
 import { Button, Col, FormControl, InputGroup, Row } from "react-bootstrap";
 
-export default function SearchPanel({SearchInData, searchText}) {
+export default function SearchPanel({searchText}) {
   return (
     <Row className="mb-2">
       <Col lg={4} md={4} sm={12} xs={12}>
         <InputGroup size="sm" style={{ direction: "ltr" }}>
-          <Button type="submit" variant="outline-secondary" onClick={SearchInData}>
+          <Button type="submit" variant="outline-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

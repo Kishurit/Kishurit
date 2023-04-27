@@ -1,7 +1,8 @@
 import React from "react";
 import { isBrowser } from "react-device-detect";
 import { getPost } from "../api";
-import { Form, Button, Col, Well } from 'react-bootstrap';
+import { NotificationManager } from "react-notifications"
+import { Form, Button, Col } from 'react-bootstrap';
 
 const ContactForm = () => {
   const handleSubmit = async (e) => {
@@ -19,8 +20,14 @@ const ContactForm = () => {
     console.log (details);
     //sendMail ();
     getPost ('/mail', { key: 'romanbr87', ...details })
-    .then (val => console.log (val))
-    .catch (val => console.log (val))
+    .then (val => {
+      NotificationManager.success('ההודעה נשלחה בהצלחה') 
+      console.log (val)
+    })
+    .catch (val => {
+      NotificationManager.error('ההודעה לא נשלחה')
+      console.log (val)
+    })
 
     return true;
   };

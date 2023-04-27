@@ -89,7 +89,7 @@ const MobileOrgForm = ({handleSubmit}) => {
         <Form.Group className="mb-3" controlId="region" as={Col} lg={6} md={6}>
             <Form.Label htmlFor="region">אזור גאוגרפי:</Form.Label>
             <Form.Select defaultValue="" name="region">
-                <option value="">הכל</option>
+            <option value="">כל הארץ</option>
                 <option value="north">צפון</option>
                 <option value="center">מרכז</option>
                 <option value="south">דרום</option>
