@@ -3,10 +3,10 @@ import { Card } from 'react-bootstrap';
 
 export default function Well(props) {
   return (
-    <Card bg="light" className="my-4">
+    <Card bg="light">
       <Card.Body>
         <Card.Text>
-          { Children }
+          { props.children }
         </Card.Text>
       </Card.Body>
     </Card>

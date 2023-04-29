@@ -3,6 +3,7 @@ import { isBrowser } from "react-device-detect";
 import { getPost } from "../api";
 import { NotificationManager } from "react-notifications"
 import { Form, Button, Col } from 'react-bootstrap';
+import Well from "../Bootstrap3/Well"
 
 const ContactForm = () => {
   const handleSubmit = async (e) => {
@@ -32,8 +33,8 @@ const ContactForm = () => {
     return true;
   };
 
-  const MyForm = ({style}) =>
-    <Form onSubmit={handleSubmit} className={`text-right ${isBrowser && 'bg-light'}`} style={style}>
+  const MyForm = ({style, className}) =>
+    <Form onSubmit={handleSubmit} className={className} style={style}>
     <h3 className="text-center">לשלוח הודעה</h3>
 
     <Form.Group className="mb-2" as={Col}>
@@ -62,8 +63,9 @@ const ContactForm = () => {
 
   return (
     <React.Fragment>
-    { isBrowser ? <MyForm style={{padding: '4% 5%', border: '1px solid silver', borderRadius: '5px'}} />:
-    <MyForm />} 
+    { isBrowser ? <Well><MyForm /></Well> :
+    <MyForm />
+    } 
     </React.Fragment>
   );
 };
