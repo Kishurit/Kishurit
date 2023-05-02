@@ -6,8 +6,8 @@ export default function DataCat({ index, setIndex, getLinksLength}) {
   const data = useSelector((state) => state.data);
   
   useEffect (() => {
-    console.log (typeof data.cat);
-  })
+    console.log (data);
+  },[])
   
   return <p>12</p>
   
