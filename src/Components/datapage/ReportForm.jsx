@@ -18,7 +18,7 @@ const ReportForm = ({name, showModal, setShowModal}) => {
 
         console.log (msgRef.current.value);
         
-        getPost ('/report', { key: 'romanbr87', report: msg, name: name })
+        getPost ('/report', { report: msg, name: name })
         .then (val => {
           NotificationManager.success('הידד', 'ההודעה נשלחה') 
           //alert ("ההודעה נשלחה");

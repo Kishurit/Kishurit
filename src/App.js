@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 import {NotificationContainer } from 'react-notifications';
+
 import { useOnlineNotification } from './hooks/useOnline'
 
 import Home from './Components/Home.jsx'
@@ -17,16 +18,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-notifications/lib/notifications.css';
 import Page from './Components/Page';
 import { fetchData } from './store/slices/data-slice';
+import Footer from './Components/Footer';
 
 
 export default function App(props) {
-  
+
   const dispatch = useDispatch ();
   const history = createBrowserHistory();
   useOnlineNotification();
 
   useEffect(() => {
-    console.clear ();
+    //console.clear ();
     dispatch(fetchData());
 
 }, [dispatch])
@@ -44,7 +46,9 @@ return (
           <Route path='*' component={()=>{return <p className='uicontainer'>Null</p> }} status={404}/>
         </Switch>
         )} />
-      </Router>
+
+        <Footer />
+    </Router>
   )
 }
 

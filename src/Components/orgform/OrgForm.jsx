@@ -17,8 +17,7 @@ const OrgForm = () => {
     }
 
     console.log (JSON.stringify(dataObj, null, 2));
-    dataObj.key = 'romanbr87';
-    getPost ('/neworg', dataObj)
+    getPost ('/neworg')
     .then (val => {
       NotificationManager.success('העסק הוגש בהצלחה למערכת') 
       console.log (val)

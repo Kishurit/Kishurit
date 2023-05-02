@@ -5,8 +5,7 @@ import "../App.css";
 import "../style/style.css";
 
 export default function DataTable(props) {
-  const [name, setName] = React.useState("");
-
+  
   return (
     <ListGroup className="list2">
       {props.data.links.map((e1, i) => (

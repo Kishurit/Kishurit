@@ -7,6 +7,7 @@ import ReportForm from './ReportForm';
 import DataCat from './DataCat';
 import RegionPanel from './RegionPanel';
 import SearchPanel from './SearchPanel';
+import jsonData from "../../JSON/db.json"
 
 const soryByAtrr = (arr) => {
   return arr = arr.sort((a, b) => {
@@ -22,7 +23,7 @@ const getLinksLength = (links) => {
 }
 
 export default function DataPage(props) {
-  const data = useMemo (() => props.data, [props])
+  const data = jsonData.job;
   const [index, setIndex] = useState (0)
   const [searchData, setSearchData] = useState()
   const [location, setLocation] = useState ("")

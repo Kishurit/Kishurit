@@ -3,24 +3,23 @@ import { useEffect } from 'react';
 import { useSelector } from "react-redux";
 import { NotificationManager} from 'react-notifications';
 import { Container, Form, Col, FloatingLabel } from 'react-bootstrap';
+import useFetch from '../hooks/useFetch';
 
 export default function Page({cat, subcat, id}) {
-    const data = useSelector((state) => state.data);
-    const myData = data.status==='ready'? data[cat]?.links[subcat]?.links[id] : null;
-
+    const data = useFetch (`/${cat}/${subcat}/${id}`)
     useEffect (()=>{
         console.clear();
-        console.log (myData);
-        if (myData === undefined) NotificationManager.error ('גישה לא נכונה לעסק') 
+        console.log (data);
+        if (data === undefined) NotificationManager.error ('גישה לא נכונה לעסק') 
 
-    }, [myData])
+    }, [data])
 
-    if (!myData) return <p>null</p>
+    if (!data) return <p>null</p>
     return (
         <>
         <Container fluid className='uicontainer' style={{textAlign: 'right'}}>
         <pre className='text-left' style={{direction: 'rtl'}}>
-            {JSON.stringify(myData,undefined, 2)}
+            {JSON.stringify(data,undefined, 2)}
         </pre>
         
         <Form.Floating className="mb-3">

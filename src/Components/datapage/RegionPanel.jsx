@@ -11,6 +11,7 @@ export default function RegionPanel({ location, setLocation }) {
       controlId="location">
         {RegionEng.map((region, i) => (
           <Form.Check
+            key={region}
             inline
             value={region}
             label={RegionHeb[i]}

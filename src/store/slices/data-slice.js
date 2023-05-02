@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { getPost } from '../../api'
 
 export const fetchData = createAsyncThunk('data/fetchData', async () => {
-    const response = await getPost ('/', { key: 'romanbr87' });
+    const response =  getPost ('/');
     return response;
 });
 

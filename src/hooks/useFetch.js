@@ -7,6 +7,7 @@ const useFetch = (url, info = null) => {
     const [error, setError] = useState(null);
   
     useEffect(() => {
+        
         getPost(url, info)
         .then(dataFromServer => {
           setData(dataFromServer);
