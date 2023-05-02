@@ -1,14 +1,14 @@
 import React from "react";
+import { useEffect } from "react";
 import { ListGroup, ListGroupItem, Modal, Button } from "react-bootstrap";
 import { isBrowser } from "react-device-detect";
 import "../App.css";
 import "../style/style.css";
 
 export default function DataTable(props) {
-  
   return (
     <ListGroup className="list2">
-      {props.data.links.map((e1, i) => (
+      {props.data?.links?.map((e1, i) => (
         <div key={"subCat" + i}>
           <ListGroupItem
             style={{

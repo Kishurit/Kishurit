@@ -18,7 +18,7 @@ export default function RegionPanel({ location, setLocation }) {
             name="inlineRadio"
             type="radio"
             checked = {location === region}
-            onClick={() => setLocation(region)}
+            onChange={() => setLocation(region)}
           />
           
         ))}

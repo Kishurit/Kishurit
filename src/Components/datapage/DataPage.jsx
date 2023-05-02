@@ -24,7 +24,7 @@ const getLinksLength = (links) => {
 }
 
 export default function DataPage(props) {
-  const [data, setDat] = useState([])
+  const [data, setData] = useState([])
   const [index, setIndex] = useState (0)
   const [searchData, setSearchData] = useState()
   const [location, setLocation] = useState ("")
@@ -61,8 +61,8 @@ export default function DataPage(props) {
   
   useEffect (() => {
       fetchData (`/${index}`)
-      .then(dataFromServer => setDat(dataFromServer)) 
-  })
+      .then(dataFromServer => setData(dataFromServer)) 
+  }, [index])
 
   return (
     <React.Fragment>
@@ -71,20 +71,20 @@ export default function DataPage(props) {
         <br style = {{padding: "0", margin: "0"}} />
 
         <Form onSubmit={SearchInData}>
-          <SearchPanel searchText={searchText}/>
+          <SearchPanel searchText={searchText} lg='4' md='8'/>
           <RegionPanel location={location} setLocation={setLocation}/>
-          <DataCat data={data} getLinksLength={getLinksLength} index={index} setIndex={setIndex}/>        
+          <DataCat lg='4' md='5' index={index} setIndex={setIndex}/>        
         </Form>
         <Row>
         <Col lg={8} md={8} sm={12} xs={12} className="pull-right" style={{ marginTop: "2%" }}>
         <h3 className="text-center">
-        { (index !== -1) ? data[index].name : (searchData.links.length !== 0) ? "חיפוש: " + searchText.current.value: "לא נמצאו רשומות עבור: " + searchText.current.value } 
+        { (index !== -1) ? data?.name : (searchData.links.length !== 0) ? "חיפוש: " + searchText.current.value: "לא נמצאו רשומות עבור: " + searchText.current.value } 
         </h3>
         {
           (index === -1) ?  
           <DataTable soryByAtrr={soryByAtrr} data={searchData} setName={setName} 
           setShowModal={setShowModal}/>:
-          <DataTable soryByAtrr={soryByAtrr} data={data[index]} setName={setName} 
+          <DataTable soryByAtrr={soryByAtrr} data={data} setName={setName} 
           setShowModal={setShowModal}/>
         }
         </Col>
