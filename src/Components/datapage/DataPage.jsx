@@ -7,7 +7,7 @@ import ReportForm from './ReportForm';
 import DataCat from './DataCat';
 import RegionPanel from './RegionPanel';
 import SearchPanel from './SearchPanel';
-import jsonData from "../../JSON/db.json"
+//import jsonData from "../../JSON/db.json"
 
 const soryByAtrr = (arr) => {
   return arr = arr.sort((a, b) => {
