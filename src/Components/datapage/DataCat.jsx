@@ -23,4 +23,3 @@ export default function DataCat({ index, setIndex, getLinksLength}) {
   </Row>
   )*/
 }
-  

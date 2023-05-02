@@ -7,7 +7,8 @@ import ReportForm from './ReportForm';
 import DataCat from './DataCat';
 import RegionPanel from './RegionPanel';
 import SearchPanel from './SearchPanel';
-//import jsonData from "../../JSON/db.json"
+import { useEffect } from 'react';
+import { fetchData } from '../../api';
 
 const soryByAtrr = (arr) => {
   return arr = arr.sort((a, b) => {
@@ -23,7 +24,7 @@ const getLinksLength = (links) => {
 }
 
 export default function DataPage(props) {
-  const data = jsonData.job;
+  const [data, setDat] = useState([])
   const [index, setIndex] = useState (0)
   const [searchData, setSearchData] = useState()
   const [location, setLocation] = useState ("")
@@ -57,9 +58,12 @@ export default function DataPage(props) {
     setIndex (-1);
     setSearchData ({links: arr});
   }
-
-  const getTotalNum = data.reduce((acc,element) => acc + getLinksLength(element.links), 0);
   
+  useEffect (() => {
+      fetchData (`/${index}`)
+      .then(dataFromServer => setDat(dataFromServer)) 
+  })
+
   return (
     <React.Fragment>
     <Container className='uicontainer'>
@@ -87,15 +91,6 @@ export default function DataPage(props) {
       </Row>
         <ReportForm name={name} showModal={showModal} setShowModal={setShowModal}/>
       </Container>
-
-      <Container fluid>
-        <Row className="fixed-bottom bg-light">
-          <Col style={{margin: '5px 0 5px 0'}}>
-              <span style={{marginRight: '2em'}}>{getTotalNum} רשומות</span>
-          </Col>
-        </Row>
-      </Container>
-    </React.Fragment>
+      </React.Fragment>
   )
 }
-  

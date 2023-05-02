@@ -31,4 +31,3 @@ export const fetchData =  async (url, method='POST', dataForServer = undefined) 
 export const getPost = async (url, data) => {
     return await fetchData (url, 'post', data);
 }    
-
