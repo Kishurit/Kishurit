@@ -6,9 +6,9 @@ const MobileOrgForm = ({handleSubmit}) => {
         <h3 className="text-center mb-3">להגיש עסק חדש</h3>
 
         <Row className="mb-2">
-            <Form.Group controlId="link1" className="mb-3" as={Col} lg={6} md={6}>
-                <Form.Label htmlFor="name"><span className="astrix">*</span>שם:</Form.Label>
-                <Form.Control type="text" name="name" required />
+            <Form.Group controlId="site_name" className="mb-3" as={Col} lg={6} md={6}>
+                <Form.Label htmlFor="site_name"><span className="astrix">*</span>שם:</Form.Label>
+                <Form.Control type="text" name="site_name" required />
             </Form.Group>
         
             <Form.Group controlId="link1" className="mb-3" as={Col} lg={6} md={6}>

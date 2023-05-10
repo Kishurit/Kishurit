@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
@@ -22,7 +22,7 @@ import Footer from './Components/Footer';
 
 
 export default function App(props) {
-
+  const windowSize = useRef(window.innerWidth);
   const dispatch = useDispatch ();
   const history = createBrowserHistory();
   useOnlineNotification();
@@ -30,7 +30,6 @@ export default function App(props) {
   useEffect(() => {
     //console.clear ();
     dispatch(fetchData());
-
 }, [dispatch])
 
 return (

@@ -32,36 +32,28 @@ export default function DataPage(props) {
   const searchText = useRef();
   //const location = useRef();
   const [name, setName] = useState ('')
-
+  const elementColoumnWidth = window.innerWidth < 1200 ? {lg: '5', md: '5'} : {lg: '4', md: '4'}; 
 
   const SearchInData = (e) => {
     e.preventDefault();
     if (searchText.current.value.trim() === '') alert ("הכנס ערך");
-    var regEx = new RegExp (searchText.current.value, "dugi")
-
-    var arr = data.reduce((a1, c1) => {
-      return [...a1, ...c1.links.reduce((a2, c2) => {
-        var subArr = c2.links.filter (e => {
-                      
-          if (location === '') return e.site_name.match (regEx)
-          else return e.site_name.match (regEx) && e.location === location
-        })
-        
-        if (subArr.length > 0) return [...a2, {cat: c2.cat, links: subArr}]
-        else return [...a2]
-
-      }, [])
-
-    ]}, [])
-
-    
-    setIndex (-1);
-    setSearchData ({links: arr});
+    const dataToserver = { searchText: searchText.current.value, location: location}
+    fetchData ('/search', 'post', dataToserver)
+    .then (dataFromServer => {
+      setSearchData (dataFromServer)
+      setIndex (-1);
+    })
+    .catch (err => {
+      setIndex (-1);
+      setSearchData ([]);  
+    })
   }
   
   useEffect (() => {
-      fetchData (`/${index}`)
-      .then(dataFromServer => setData(dataFromServer)) 
+      if (index >= 0) {
+        fetchData (`/${index}`)
+        .then(dataFromServer => setData(dataFromServer)) 
+      }
   }, [index])
 
   return (
@@ -71,9 +63,9 @@ export default function DataPage(props) {
         <br style = {{padding: "0", margin: "0"}} />
 
         <Form onSubmit={SearchInData}>
-          <SearchPanel searchText={searchText} lg='4' md='8'/>
+          <SearchPanel searchText={searchText} {...elementColoumnWidth} />
           <RegionPanel location={location} setLocation={setLocation}/>
-          <DataCat lg='4' md='5' index={index} setIndex={setIndex}/>        
+          <DataCat {...elementColoumnWidth} index={index} setIndex={setIndex}/>        
         </Form>
         <Row>
         <Col lg={8} md={8} sm={12} xs={12} className="pull-right" style={{ marginTop: "2%" }}>

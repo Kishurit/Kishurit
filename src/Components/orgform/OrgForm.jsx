@@ -11,13 +11,14 @@ const OrgForm = () => {
     e.preventDefault();
     console.clear();
 
-    var dataObj = {}
+    var dataObj = { data: { }}
     for (e of e.target.elements) {
-      dataObj[e.name] = e.value;
+      if (e.name.trim() === '') continue;
+      dataObj.data[e.name] = e.value;
     }
 
     console.log (JSON.stringify(dataObj, null, 2));
-    getPost ('/neworg')
+    getPost ('/neworg', dataObj)
     .then (val => {
       NotificationManager.success('העסק הוגש בהצלחה למערכת') 
       console.log (val)

@@ -8,8 +8,8 @@ const DesktopOrgForm = ({handleSubmit}) => {
         <h3 className="text-center mb-3">להגיש עסק חדש</h3>
 
         <Row>
-            <Form.Group controlId="name" className="mb-3" as={Col} lg={6} md={6}>
-                <Form.Control size='sm' type="text" name="name" required placeholder="*שם"/>
+            <Form.Group controlId="site_name" className="mb-3" as={Col} lg={6} md={6}>
+                <Form.Control size='sm' type="text" name="site_name" required placeholder="*שם"/>
             </Form.Group>
 
             <Form.Group controlId="link1" className="mb-3" as={Col} lg={6} md={6}>
