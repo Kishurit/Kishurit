@@ -2,8 +2,8 @@ import React from 'react';
 import axios, {isCancel, AxiosError} from 'axios';
 const context = React.createContext();
 
-//export const serverURL = (url) => `http://localhost:8080${url}`;
-export const serverURL = (url) => `https://calm-plum-scorpion-suit.cyclic.app${url}`
+export const serverURL = (url) => `http://localhost:8080${url}`;
+//export const serverURL = (url) => `https://calm-plum-scorpion-suit.cyclic.app${url}`
 export const Provider = context.Provider;
 export const Consumer = context.Consumer;
 
