@@ -3,14 +3,8 @@
  <p align="center">Catalogue of employment websites</p>
 </p>
   <p align="center">
-    <a href="https://github.com/romanbr87/Kishurit/actions">
-      <img alt="Tests Passing" src="https://github.com/romanbr87/Kishurit/workflows/Test/badge.svg" />
-    </a>
     <a href="https://github.com/romanbr87/Kishurit/graphs/contributors">
       <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/romanbr87/Kishurit" />
-    </a>
-    <a href="https://codecov.io/gh/romanbr87/Kishurit">
-      <img src="https://codecov.io/gh/romanbr87/Kishurit/branch/master/graph/badge.svg" />
     </a>
     <a href="https://github.com/romanbr87/Kishurit/issues">
       <img alt="Issues" src="https://img.shields.io/github/issues/romanbr87/Kishurit?color=0088ff" />
@@ -22,8 +16,6 @@
   </p>
 
   <p align="center">
-    <a href="#demo">View Demo</a>
-    ·
     <a href="https://github.com/romanbr87/Kishurit/issues/new/choose">Report Bug</a>
     ·
     <a href="https://github.com/romanbr87/Kishurit/issues/new/choose">Request Feature</a>
