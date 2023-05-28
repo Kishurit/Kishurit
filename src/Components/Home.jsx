@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react'
-
-import '../App.css'
-import "../style/style.css"
 import DataPage from "./datapage/DataPage"
 
 //import jsonData from "../JSON/db.json"

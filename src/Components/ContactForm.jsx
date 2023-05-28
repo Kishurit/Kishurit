@@ -20,7 +20,7 @@ const ContactForm = () => {
     };
     console.log (details);
     //sendMail ();
-    getPost ('/mail', { key: 'romanbr87', ...details })
+    getPost ('/mail', details )
     .then (val => {
       NotificationManager.success('ההודעה נשלחה בהצלחה') 
       console.log (val)
@@ -46,7 +46,7 @@ const ContactForm = () => {
     </Form.Group>
 
     <Form.Group className="mb-2" as={Col}>
-      <Form.Control type="email" size='sm' id="email" name="email" placeholder="כתובת מייל" required />
+      <Form.Control type="email" size='sm' id="email" name="email" placeholder="כתובת מייל" />
     </Form.Group>
 
     <Form.Group className="mb-2" as={Col}>

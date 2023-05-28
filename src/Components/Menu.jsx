@@ -9,7 +9,7 @@ export default function Menu() {
   return (
     <Navbar bg="dark" variant="dark" expand="sm" fixed="top" style={{ fontSize: '1.2rem', 
     paddingTop: isBrowser ? '0' : 'auto', paddingBottom: isBrowser ? '4px' : 'auto'}}>
-      <Container>
+      <Container fluid>
         <Navbar.Brand as={Link} to="/" className="text-center" style={{fontSize: '1.2rem', paddingLeft: '5px'}}>
           דף הבית
         </Navbar.Brand>

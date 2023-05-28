@@ -6,19 +6,20 @@ import { createBrowserHistory } from "history";
 import {NotificationContainer } from 'react-notifications';
 
 import { useOnlineNotification } from './hooks/useOnline'
+import { fetchData } from './store/slices/data-slice';
 
-import Home from './Components/Home.jsx'
-import About from './Components/About.jsx'
+import Home from './Components/Home'
+import About from './Components/About'
 import Menu from './Components/Menu';
-import OrgForm from './Components/orgform/OrgForm.jsx';
+import OrgForm from './Components/orgform/OrgForm';
+import Page from './Components/Page';
+import Footer from './Components/Footer';
 
 import './App.css'
 import "./style/style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-notifications/lib/notifications.css';
-import Page from './Components/Page';
-import { fetchData } from './store/slices/data-slice';
-import Footer from './Components/Footer';
+import { ReactNoti, POSITION } from 'react-noti';
 
 
 export default function App(props) {
@@ -35,6 +36,7 @@ export default function App(props) {
 return (
       <Router forceRefresh={false} basename='/' history={history}>
         <NotificationContainer/>
+        <ReactNoti position={POSITION.TOP_CENTER} />
         <Menu/>
         <Route render = {({ location }) => (
         <Switch location = { location }>
