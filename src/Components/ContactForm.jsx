@@ -9,28 +9,27 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.clear();
-    const { subject, name, email, tel, message } = e.target.elements;
-    let details = {
-      name: name.value.trim(),
-      subject: subject.value.trim(),
-      email: email.value.trim(),
-      tel: tel.value.trim(),
-      body: message.value,
-
-    };
-    console.log (details);
+    //const { subject, name, email, tel, message } = e.target.elements;
+   
+    var dataObj = { data: { }}
+    for (let e1 of e.target.elements) {
+      if (e1.name.trim() === '') continue;
+      dataObj.data[e1.name] = e1.value;
+    }
+    console.log (dataObj);
+    
     //sendMail ();
-    getPost ('/mail', details )
+    getPost ('/mail', dataObj )
     .then (val => {
-      NotificationManager.success('ההודעה נשלחה בהצלחה') 
+      NotificationManager.success('ההודעה נשלחה בהצלחה', '', 2000) 
       console.log (val)
     })
     .catch (val => {
-      NotificationManager.error('ההודעה לא נשלחה')
+      NotificationManager.error('ההודעה לא נשלחה', '', 2000)
       console.log (val)
     })
 
-    return true;
+    return false;
   };
 
   const MyForm = ({style, className}) =>

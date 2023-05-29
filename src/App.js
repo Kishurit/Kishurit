@@ -19,8 +19,6 @@ import './App.css'
 import "./style/style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-notifications/lib/notifications.css';
-import { ReactNoti, POSITION } from 'react-noti';
-
 
 export default function App(props) {
   const windowSize = useRef(window.innerWidth);
@@ -36,7 +34,6 @@ export default function App(props) {
 return (
       <Router forceRefresh={false} basename='/' history={history}>
         <NotificationContainer/>
-        <ReactNoti position={POSITION.TOP_CENTER} />
         <Menu/>
         <Route render = {({ location }) => (
         <Switch location = { location }>

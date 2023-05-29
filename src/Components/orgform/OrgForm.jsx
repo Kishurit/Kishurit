@@ -12,9 +12,9 @@ const OrgForm = () => {
     console.clear();
 
     var dataObj = { data: { }}
-    for (e of e.target.elements) {
-      if (e.name.trim() === '') continue;
-      dataObj.data[e.name] = e.value;
+    for (let e1 of e.target.elements) {
+      if (e1.name.trim() === '') continue;
+      dataObj.data[e1.name] = e1.value;
     }
 
     //console.log (JSON.stringify(dataObj, null, 2));

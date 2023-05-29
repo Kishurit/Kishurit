@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { getPost } from "../../api";
 import { Modal, Button, ButtonGroup } from 'react-bootstrap';
 import { NotificationManager} from 'react-notifications';
-import { notify } from 'react-noti';
 
 const ReportForm = ({name, showModal, setShowModal}) => {
     const msgRef = useRef();
@@ -11,9 +10,6 @@ const ReportForm = ({name, showModal, setShowModal}) => {
       timeOut: 2500,
       showProgress: false
     }
-
-  const options1 = {...options, title: 'ההודעה נשלחה'}
-  const options2 = {...options, title: "ההודעה לא נשלחה"}
 
     const handleSubmit = async (e) => {
         console.clear();
@@ -27,7 +23,6 @@ const ReportForm = ({name, showModal, setShowModal}) => {
         getPost ('/report', { report: msg, name: name })
         .then (val => {
           NotificationManager.success('הידד', 'ההודעה נשלחה') 
-          notify.success('הידד', options1) 
           console.log (msgRef.current.value);
           alert ("ההודעה נשלחה");
           console.log (val);
@@ -35,7 +30,6 @@ const ReportForm = ({name, showModal, setShowModal}) => {
         .catch (val => {
           console.log (msgRef.current.value);
           NotificationManager.error('שגיאה', 'ההודעה לא נשלחה')
-          notify.error('שגיאה', options2)
           alert ("ההודעה לא נשלחה");
           console.log (val);
         })
