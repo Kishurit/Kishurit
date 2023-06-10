@@ -41,6 +41,7 @@ export default function DataTable(props) {
               {e2.link2 && <a href={e2.link2}>קישור 2</a>}
 
               {e2.link3 && <a href={e2.link3}>קישור 3</a>}
+              {e2.link4 && <a href={e2.link4}>קישור 4</a>}
 
               {e2.facebook_link1 && <a href={e2.facebook_link1}>דף פייסבוק</a>}
 

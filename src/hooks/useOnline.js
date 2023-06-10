@@ -1,9 +1,12 @@
-import {useEffect, useState} from 'react';
-import { NotificationManager} from 'react-notifications';
-export const useOnline = () => { 
-    const [isOnline, setIsOnline] = useState(window.navigator.onLine ?? true);         
+import { useEffect, useState } from "react";
+
+const useOnline = () => {
+    
+    const [isOnline, setIsOnline] = useState(window.navigator.onLine ?? true);
+    const [error, setError] = useState (null);
+
     useEffect(() => {
-        const handOnline = () => {
+        const handleOnline = () => {
             setIsOnline(true);
         };
 
@@ -11,33 +14,39 @@ export const useOnline = () => {
             setIsOnline(false);
         };
 
-        window.addEventListener('online', handOnline);
-        window.addEventListener('offline', handleOffline);
+        window.addEventListener("online", handleOnline);
+        window.addEventListener("offline", handleOffline);
+
         return () => {
-            window.removeEventListener('online', handOnline);
-            window.removeEventListener('offline', handleOffline);
+            window.removeEventListener("online", handleOnline);
+            window.removeEventListener("offline", handleOffline);
         };
+
     }, []);
 
-    return isOnline;
-}
+    const checkConnectivity = () => {
+        fetch('https://www.google.com/', { mode: 'no-cors' })
+        .then(() => setIsOnline(true && window.navigator.onLine))
+        .catch((error) => {
+            setIsOnline(false);
+            setError(error);
+        });
+    };
 
-export const useOnlineNotification = () => { 
+    if (typeof window === "undefined" || typeof navigator === "undefined") {
+        return {
+            isOnline: null,
+            isOffline: null,
+            error: "react-use-online meant to be used only in a browser environment.",
+        };
+    }
     
-    useEffect(() => {
-        const handOnline = () => {
-            NotificationManager.success('Success', 'you are online') 
-        };
+    return {
+        isOnline: isOnline,
+        isOffline: !isOnline,
+        checkConnectivity: checkConnectivity,
+        error: error
+    };
+};
 
-        const handleOffline = () => {
-            NotificationManager.error('Error', 'you are offline')
-        };
-
-        window.addEventListener('online', handOnline);
-        window.addEventListener('offline', handleOffline);
-        return () => {
-            window.removeEventListener('online', handOnline);
-            window.removeEventListener('offline', handleOffline);
-        };
-    }, []);
-}
+export default useOnline

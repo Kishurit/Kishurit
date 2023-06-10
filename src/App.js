@@ -5,7 +5,6 @@ import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 import {NotificationContainer } from 'react-notifications';
 
-import { useOnlineNotification } from './hooks/useOnline'
 import { fetchData } from './store/slices/data-slice';
 
 import Home from './Components/Home'
@@ -24,7 +23,6 @@ export default function App(props) {
   const windowSize = useRef(window.innerWidth);
   const dispatch = useDispatch ();
   const history = createBrowserHistory();
-  useOnlineNotification();
 
   useEffect(() => {
     //console.clear ();
