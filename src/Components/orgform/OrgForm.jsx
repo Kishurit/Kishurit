@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { isBrowser } from 'react-device-detect';
-import { getPost } from '../../api';
+import { getPost, serverURL } from '../../api';
 import { Container, Col, Row } from 'react-bootstrap';
 import { NotificationManager} from 'react-notifications';
 import DesktopOrgForm from './DesktopOrgForm';
@@ -18,7 +18,7 @@ const OrgForm = () => {
     }
 
     //console.log (JSON.stringify(dataObj, null, 2));
-    getPost ('/neworg', dataObj)
+    getPost (serverURL('/neworg'), dataObj)
     .then (val => {
       NotificationManager.success('העסק הוגש בהצלחה למערכת', '', 2000) 
       console.log (val)

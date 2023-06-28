@@ -7,22 +7,23 @@ export const serverURL = (url) => `http://localhost:8080${url}`;
 export const Provider = context.Provider;
 export const Consumer = context.Consumer;
 
-export const fetchData =  async (url, method='POST', dataForServer = undefined) => {
+export const fetchData =  async (url, method='POST', dataForServer = undefined, withCredentials = false) => {
     dataForServer =  {...dataForServer, key: 'romanbr87'}
     const requestOptions = {
         method: method,
         headers: {'Content-Type': 'application/json'},
-        data: dataForServer
+        data: dataForServer,
+        withCredentials: withCredentials,
     }
 
     try {
-        const  {data} = await axios(serverURL(url), requestOptions)
+        const  {data} = await axios(url, requestOptions)
         return data;
     } 
     
     catch (error) {
         console.log (error.response);
-        console.log (`url: ${serverURL(url)}`)
+        console.log (`url: ${url}`)
         const customError = new Error(error.response.data.message)
         throw customError;
     }

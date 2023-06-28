@@ -2,6 +2,24 @@ import React from 'react';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 import { isBrowser } from 'react-device-detect';
 
+const initialValues = {
+  site_name: '',
+  link1: '',
+  link2: '',
+  link3: '',
+  facebook_link1: '',
+  facebook_link2: '',
+  linkedIn_link: '',
+  instagram_link: '',
+  email1: '',
+  email2: '',
+  tel1: '',
+  tel2: '',
+  whatsapp: '',
+  region: '',
+  message: '',
+};
+
 const DesktopOrgForm = ({ handleSubmit }) => {
 
   return (
@@ -93,9 +111,13 @@ const DesktopOrgForm = ({ handleSubmit }) => {
           </Form.Group>
         </Row>
         
-        <Button variant="primary" size="sm" type="submit">
-          לשלוח
-        </Button>
+        <Row>
+          <Col xl={{ span: 6, offset: 4 }} lg={{ span: 6, offset: 4 }} md={{ span: 6, offset: 4 }}>
+              <Button variant="primary" size="sm" type="submit">
+                לשלוח
+              </Button>
+          </Col>
+        </Row>
       </Form>
     </React.Fragment>
   );

@@ -4,9 +4,10 @@ import { useSelector } from "react-redux";
 import { NotificationManager} from 'react-notifications';
 import { Container, Form, Col, FloatingLabel } from 'react-bootstrap';
 import useFetch from '../hooks/useFetch';
+import { serverURL } from '../api';
 
 export default function Page({cat, subcat, id}) {
-    const data = useFetch (`/${cat}/${subcat}/${id}`)
+    const data = useFetch (serverURL(`/${cat}/${subcat}/${id}`))
     useEffect (()=>{
         console.clear();
         console.log (data);

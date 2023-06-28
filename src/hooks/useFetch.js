@@ -1,25 +1,48 @@
 import { useEffect, useState } from "react";
-import { getPost } from "../api";
+import axios from "axios";
 
-const useFetch = (url, info = null) => {
-    const [data, setData] = useState(null);
-    const [isPending, setIsPending] = useState(true);
-    const [error, setError] = useState(null);
-  
-    useEffect(() => {
-        
-        getPost(url, info)
-        .then(dataFromServer => {
-          setData(dataFromServer);
-          setIsPending (false)
-        })
-        .catch (err => {
-          setIsPending (false)
-          setError (err);
-        })
-    }, [url]);
-  
-    return {data, error, isPending, setData};
-  };
-  
-  export default useFetch;
+const defaultHeaders = { "Content-Type": "application/json" };
+
+const useFetch = (
+  url,
+  method = "POST",
+  body = undefined,
+  headers = defaultHeaders,
+  withCredentials = false,
+) => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const cancelSource = axios.CancelToken.source();
+    const controller = new AbortController();
+    (async () => {
+      setIsLoading(true);
+      try {
+        const response = await axios(url, {
+          method,
+          headers,
+          withCredentials: withCredentials,
+          data: body,
+          cancelToken: cancelSource.token,
+          signal: controller.signal,
+        });
+        setData(response.data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    })();
+
+    return () => {
+      cancelSource.cancel("Request canceled by user.");
+      controller.abort();
+    };
+  }, [body, headers, method, url, withCredentials]);
+
+  return { data, error, isLoading };
+};
+
+export default useFetch;

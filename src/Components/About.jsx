@@ -1,6 +1,3 @@
-import '../App.css'
-import "../style/style.css"
-
 import React from 'react'
 import { Row, Col, Container } from 'react-bootstrap';
 import ContactForm from './ContactForm';
@@ -9,7 +6,7 @@ import { isBrowser } from 'react-device-detect';
 export default function About() {
  
   const AboutTxt = () => 
-  <React.Fragment>
+  <>
       <Row>
       <Col className="page-header">
         <h3 id="title" style={{ textAlign: 'center', width: "100%"  }}>אודות אתר קישורית</h3>
@@ -40,11 +37,11 @@ export default function About() {
       <a href="mailto:drushimgalil@gmail.com">מייל</a> 
       </p>
       </Col></Row>
-  </React.Fragment>
+  </>
   
 
   const BrowserElement = () => 
-    <React.Fragment>
+    <>
       <Row>
         <Col lg={1} md={1}></Col>
         <Col lg={6} md={6}>
@@ -55,24 +52,23 @@ export default function About() {
           <ContactForm />
         </Col>
       </Row>
-    </React.Fragment>
+    </>
 
   const MobileElement = () => 
-    <React.Fragment>
+    <>
       <AboutTxt />
+      <br />
       <Row>
         <Col style={{marginBottom: '2em'}}>
           <ContactForm />
         </Col>
       </Row>
-    </React.Fragment>
+    </>
 
 return (
-      <React.Fragment>
-      <Container className="uicontainer">
-      { isBrowser ? <BrowserElement/> : <MobileElement /> }
-       </Container> 
-      </React.Fragment>
+    <Container className="uicontainer">
+    { isBrowser ? <BrowserElement/> : <MobileElement /> }
+    </Container> 
   )
 }
   

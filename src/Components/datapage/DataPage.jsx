@@ -1,14 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import React, { useState, useMemo, useRef } from 'react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import DataTable from "../DataTable3";
 import ReportForm from './ReportForm';
 import DataCat from './DataCat';
 import RegionPanel from './RegionPanel';
 import SearchPanel from './SearchPanel';
-import { useEffect } from 'react';
-import { fetchData } from '../../api';
+import { fetchData, serverURL } from '../../api';
 
 const soryByAtrr = (arr) => {
   return arr = arr.sort((a, b) => {
@@ -17,11 +16,11 @@ const soryByAtrr = (arr) => {
   })
 }
 
-const getLinksLength = (links) => {
+/*const getLinksLength = (links) => {
   return links.reduce ((a, c) => {
       return a + c.links.length;
   }, 0)
-}
+}*/
 
 export default function DataPage(props) {
   const [data, setData] = useState([])
@@ -30,7 +29,8 @@ export default function DataPage(props) {
   const [location, setLocation] = useState ("")
   const [showModal, setShowModal] = useState (false)
   const searchText = useRef();
-  //const location = useRef();
+ 
+
   const [name, setName] = useState ('')
   const elementColoumnWidth = window.innerWidth < 1200 ? {lg: '5', md: '5'} : {lg: '4', md: '4'}; 
 
@@ -38,7 +38,7 @@ export default function DataPage(props) {
     e.preventDefault();
     if (searchText.current.value.trim() === '') alert ("הכנס ערך");
     const dataToserver = { searchText: searchText.current.value, location: location}
-    fetchData ('/search', 'post', dataToserver)
+    fetchData (serverURL('/search'), 'post', dataToserver)
     .then (dataFromServer => {
       setSearchData (dataFromServer)
       setIndex (-1);
@@ -51,7 +51,7 @@ export default function DataPage(props) {
   
   useEffect (() => {
       if (index >= 0) {
-        fetchData (`/${index}`)
+        fetchData (serverURL(`/${index}`))
         .then(dataFromServer => setData(dataFromServer)) 
       }
   }, [index])

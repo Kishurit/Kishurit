@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { getPost } from "../../api";
+import { getPost, serverURL } from "../../api";
 import { Modal, Button, ButtonGroup } from 'react-bootstrap';
 import { NotificationManager} from 'react-notifications';
 
@@ -20,7 +20,7 @@ const ReportForm = ({name, showModal, setShowModal}) => {
             return;
         }
        
-        getPost ('/report', { report: msg, name: name })
+        getPost (serverURL('/report'), { report: msg, name: name })
         .then (val => {
           NotificationManager.success('הידד', 'ההודעה נשלחה') 
           console.log (msgRef.current.value);

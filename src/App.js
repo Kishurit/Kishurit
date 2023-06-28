@@ -18,6 +18,7 @@ import './App.css'
 import "./style/style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-notifications/lib/notifications.css';
+import 'react-bootstrap-typeahead/css/Typeahead.css';
 
 export default function App(props) {
   const windowSize = useRef(window.innerWidth);
