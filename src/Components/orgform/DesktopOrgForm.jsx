@@ -1,6 +1,9 @@
 import React from 'react';
+import axios from 'axios'
+import { useEffect } from 'react';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 import { isBrowser } from 'react-device-detect';
+import { serverURL } from "../../api"
 
 const initialValues = {
   site_name: '',
@@ -16,7 +19,7 @@ const initialValues = {
   tel1: '',
   tel2: '',
   whatsapp: '',
-  region: '',
+  location: '',
   message: '',
 };
 
@@ -91,8 +94,8 @@ const DesktopOrgForm = ({ handleSubmit }) => {
             <Form.Control size="sm" type="tel" placeholder="מספר ווטסאפ" name="whatsapp" />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="region" as={Col} lg={6} md={6}>
-            <Form.Select size="sm" defaultValue="" name="region">
+          <Form.Group className="mb-3" controlId="location" as={Col} lg={6} md={6}>
+            <Form.Select size="sm" defaultValue="" name="location">
               <option disabled={true}>*מיקום</option> 
               <option value="">כל הארץ</option>
               <option value="north">צפון</option>

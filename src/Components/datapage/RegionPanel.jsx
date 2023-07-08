@@ -1,8 +1,8 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 
-const RegionEng = ["", "north", "south", "center", "yosh"];
-const RegionHeb = ["הכל", "צפון", "דרום", "מרכז", 'יו"ש'];
+const RegionEng = ["", "north", "south", "center", "yosh", "website"];
+const RegionHeb = ["הכל", "צפון", "דרום", "מרכז", 'יו"ש', 'אתר'];
 
 export default function RegionPanel({ location, setLocation }) {
   return (
