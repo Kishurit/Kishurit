@@ -124,7 +124,7 @@ const ContactForm = () => {
   return (
     <>
       {isBrowser ? (
-        <Well className="lg:col-span-2 sm:col-span-1">
+        <Well className="lg:col-span-2 sm:col-span-1" type="well2">
           <MyForm />
         </Well>
       ) : (

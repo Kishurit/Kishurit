@@ -36,7 +36,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 100;
-
 }
 
 .pull-center {
@@ -109,7 +108,25 @@ h1,h2,h3,h4 { letter-spacing: 0.09em; border: none;}
  /*---------------------------------------------------------------------------------------------------------------------------*/
 
   #title { font-size: 1.6em; }
+  .title {
+    text-shadow: 1px 1px .5px black;
+    font-size:x-large;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.075em 0 0.2em;
+  }
 
+  .pageTitle {
+    text-shadow: 1px 1px .5px black;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 125px;
+    padding: 0;
+    margin: 0;
+    margin-top: 2%;
+    margin-bottom: 1%;
+  }
+  
   #testTable, #testTable > tbody, #testTable > tbody > tr { width: 100%; }
    
   .panel-heading > h3 { font-size: 1.6em; } 

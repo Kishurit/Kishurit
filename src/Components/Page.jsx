@@ -1,48 +1,123 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useSelector } from "react-redux";
-import { NotificationManager} from 'react-notifications';
-import { Container, Form, Col, FloatingLabel } from 'react-bootstrap';
-import useFetch from '../hooks/useFetch';
-import { serverURL } from '../api';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { FaExternalLinkAlt, FaEnvelope, FaPhone } from "react-icons/fa";
+import "../style/page.css";
 
-export default function Page({cat, subcat, id}) {
-    const data = useFetch (serverURL(`/${cat}/${subcat}/${id}`))
-    useEffect (()=>{
-        console.clear();
-        console.log (data);
-        if (data === undefined) NotificationManager.error ('גישה לא נכונה לעסק') 
+export default function Page() {
+  const data0 = {
+    site_name: "נציב שירות המדינה",
+    link: "https://www.gov.il/he/service/apply_for_a_civil_service_job_via_tenders_system",
+    link2: "https://www.gov.il/he/Departments/civil_service_commission",
+    link3:
+      "https://www.gov.il/he/Departments/publications/?publicationType=0ec5a7ef-977c-459f-8c0a-dcfbe35c8164&drushimStatusType=1&skip=0&limit=10",
+    facebook_link1: "https://www.facebook.com/Civil.service.Israel",
+    facebook_link2: "",
+    facebook_link3: [],
+    linkedIn_link: "",
+    email1: "pniyot@csc.gov.il",
+    email2: "",
+    tel1: "074-769-9100",
+    tel2: "",
+    whatsapp: "",
+    location: "",
+  };
 
-    }, [data])
+  const data = {
+    site_name: data0.site_name,
+    links: [data0.link, data0.link2, data0.link3],
+    socMedia_links: [
+      { name: "פייסבוק", link: data0.facebook_link1 },
+      { name: "פייסבוק", link: data0.facebook_link2 },
+    ],
+    email: [data0.email1, data0.email2],
+    tel: [data0.tel1, data0.tel2],
+    whatsapp: data0.whatsapp,
+    location: data0.location,
+  };
 
-    if (!data) return <p>null</p>
-    return (
-        <>
-        <Container fluid className='uicontainer' style={{textAlign: 'right'}}>
-        <pre className='text-left' style={{direction: 'rtl'}}>
-            {JSON.stringify(data,undefined, 2)}
-        </pre>
-        
-        <Form.Floating className="mb-3">
-        <Form.Control
-          id="floatingInputCustom"
-          type="email"
-          placeholder="name@example.com"
-        />
-        <label htmlFor="floatingInputCustom">Email address</label>
-        </Form.Floating>
-        <Form.Floating>
-            <Form.Control
-            id="floatingPasswordCustom"
-            type="password"
-            placeholder="Password"
-            />
-            <label htmlFor="floatingPasswordCustom">Password</label>
-        </Form.Floating>
-    
-        </Container>
-        </>
-    )
+  if (!data) return null;
+
+  return (
+    <Container className="uicontainer" style={{ textAlign: "right" }}>
+      <h1 className="beautiful-title text-center">{data.site_name}</h1>
+
+      <Row>
+        <Col lg={6} md={6}>
+          <div className="well">
+            <h4>קישורים שימושיים</h4>
+            <h5>אתרי אינטרנט</h5>
+            <ul className="d-flex gap-3 mb-4 mt-0">
+              {data.links.map((link, index) => (
+                <li key={index}>
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    קישור {index + 1} <FaExternalLinkAlt />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <h5>רשתות חברתיות</h5>
+            <ul className="d-flex gap-3 mb-4 mt-0">
+              {data.socMedia_links.map((link, index) => (
+                <li key={index}>
+                  <a href={link.link} target="_blank" rel="noopener noreferrer">
+                    {link.name} <FaExternalLinkAlt />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={6} md={6}>
+          <div className="well bg-light">
+            <h4>פרטי התקשרות</h4>
+            <ul className="link-list gap-3 mb-3 mt-1">
+              {data.email.map((email, index) => (
+                <li key={index} className="mt-1 mb-1">
+                  <label>
+                    <FaEnvelope />{" "}
+                    <a
+                      href={"mailto:" + email}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {email}
+                    </a>
+                  </label>
+                </li>
+              ))}
+              {data.tel.map((tel, index) => (
+                <li key={index} className="mt-1 mb-1">
+                  <label>
+                    <FaPhone />{" "}
+                    <a
+                      href={"tel:" + tel}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {tel}
+                    </a>
+                  </label>
+                </li>
+              ))}
+
+              <li className="mt-1 mb-1">
+                <label>
+                  <FaPhone />{" "}
+                  <a
+                    href={"tel:" + data.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {data.whatsapp}
+                  </a>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
-
-

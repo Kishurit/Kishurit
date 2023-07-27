@@ -4,7 +4,7 @@ import { getPost, serverURL } from '../../api';
 import { Container, Col, Row } from 'react-bootstrap';
 import { NotificationManager} from 'react-notifications';
 import DesktopOrgForm from './DesktopOrgForm';
-import MobileOrgForm from './MobileOrgForm';
+//import MobileOrgForm from './MobileOrgForm';
 
 const OrgForm = () => {    
   const handleSubmit = async (e) => {

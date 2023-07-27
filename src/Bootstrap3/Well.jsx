@@ -1,9 +1,10 @@
 import React from "react";
 import "../style/well.css";
 
-export default function Well({ className, style, children, lg, sm, ...props }) {
+export default function Well({ className, style, type, children, lg, sm, ...props }) {
   const generateClassName  = () => {
-    let myClass = `well ${className ? className : ''} `;
+    type = type == null ? 'well' : type;
+    let myClass = `${type} ${className ? className : ''} `;
     if (!(sm || lg) || (lg && sm)) return myClass;
     else if (lg) return myClass + ' well-lg';
     else if (sm) return myClass + ' well-sm';

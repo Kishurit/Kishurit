@@ -2,8 +2,11 @@ import React from 'react';
 import axios, {isCancel, AxiosError} from 'axios';
 const context = React.createContext();
 
-//export const serverURL = (url) => `http://localhost:8080${url}`;
-export const serverURL = (url) => `https://dark-jade-caridea-sari.cyclic.app${url}`
+//const baseUrl = 'https://dark-jade-caridea-sari.cyclic.app';
+//const baseUrl = 'https://zzsl5m-8081.csb.app';
+const baseUrl = 'http://localhost:8081';
+export const serverURL = (url) => `${baseUrl}${url}`;
+
 export const Provider = context.Provider;
 export const Consumer = context.Consumer;
 
@@ -22,10 +25,10 @@ export const fetchData =  async (url, method='POST', dataForServer = undefined, 
     } 
     
     catch (error) {
-        console.log (error.response);
+        console.log (error);
         console.log (`url: ${url}`)
-        const customError = new Error(error.response.data.message)
-        throw customError;
+        //const customError = new Error(error.response.data.message)
+        //throw customError;
     }
 } 
     
