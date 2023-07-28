@@ -2,9 +2,9 @@ import React from 'react';
 import axios, {isCancel, AxiosError} from 'axios';
 const context = React.createContext();
 
-//const baseUrl = 'https://dark-jade-caridea-sari.cyclic.app';
+const baseUrl = 'https://dark-jade-caridea-sari.cyclic.app';
 //const baseUrl = 'https://zzsl5m-8081.csb.app';
-const baseUrl = 'http://localhost:8081';
+//const baseUrl = 'http://localhost:8081';
 export const serverURL = (url) => `${baseUrl}${url}`;
 
 export const Provider = context.Provider;
