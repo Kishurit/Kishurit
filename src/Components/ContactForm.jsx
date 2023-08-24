@@ -5,7 +5,7 @@ import { NotificationManager } from "react-notifications";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Form, Button, Col } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import Well from "../Bootstrap3/Well";
 
 const schema = yup.object().shape({

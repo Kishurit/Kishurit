@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 
 const StyledLabel = styled.h1`
   opacity: ${(props) => props.opacity};
@@ -11,22 +11,22 @@ const StyledLabel = styled.h1`
 
 const FadeOutLabel = ({ text, fadeDuration }) => {
   const [opacity, setOpacity] = useState(1);
-  const [duration, setDuration] = useState (fadeDuration)
-  const op = 1 / fadeDuration; 
+  const [duration, setDuration] = useState(fadeDuration);
+  const op = 1 / fadeDuration;
 
   useEffect(() => {
     const fadeTimer = setInterval(() => {
-      setOpacity(prevOpacity => prevOpacity - op);
-      if (duration === 0) clearInterval (fadeTimer)
-      setDuration (prevDuration => prevDuration - 1);
+      setOpacity((prevOpacity) => prevOpacity - op);
+      if (duration === 0) clearInterval(fadeTimer);
+      setDuration((prevDuration) => prevDuration - 1);
     }, 1000);
 
     return () => {
       clearInterval(fadeTimer);
     };
-  }, [duration]);
+  }, [duration, op]);
 
-  if (duration <=0) return <></>
+  if (duration <= 0) return <></>;
   else return <StyledLabel opacity={opacity}>{text}</StyledLabel>;
 };
 
