@@ -1,6 +1,6 @@
 import React from "react";
-import { useEffect } from "react";
-import { ListGroup, ListGroupItem, Modal, Button } from "react-bootstrap";
+//import { useEffect } from "react";
+import { ListGroup, ListGroupItem, Button } from "react-bootstrap";
 import { isBrowser } from "react-device-detect";
 
 export default function DataTable(props) {
@@ -51,7 +51,7 @@ export default function DataTable(props) {
 
               <Button
                 variant="link"
-                style={{ fontWeight: "400", marginTop: '-0.3em' }}
+                style={{ fontWeight: "400", marginTop: "-0.3em" }}
                 onClick={() => {
                   props.setName(e2.site_name);
                   props.setShowModal(true);
