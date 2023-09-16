@@ -3,6 +3,7 @@ import { isBrowser } from 'react-device-detect';
 import { getPost, serverURL } from '../../api';
 import { Container, Col, Row } from 'react-bootstrap';
 import { NotificationManager} from 'react-notifications';
+import DesktopOrgForm1 from './DesktopOrgForm1';
 import DesktopOrgForm from './DesktopOrgForm';
 //import MobileOrgForm from './MobileOrgForm';
 
@@ -36,9 +37,11 @@ const OrgForm = () => {
     <Row>
       { isBrowser ?      
       <React.Fragment>
-      <Col lg={3} md={3}></Col>
       <Col lg={6} md={6} style={{paddingTop: '10px'}}>
         <DesktopOrgForm handleSubmit={handleSubmit}/>
+      </Col> 
+      <Col lg={6} md={6} style={{paddingTop: '10px'}}>
+        <DesktopOrgForm1 handleSubmit={handleSubmit}/>
       </Col> 
       </React.Fragment>: 
       <Col>

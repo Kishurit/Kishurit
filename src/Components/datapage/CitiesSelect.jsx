@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ClearButton, Typeahead } from "react-bootstrap-typeahead";
-import useFetch from "../../hooks/useFetch";
-import { Col, Spinner } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 const CitiesSelect = (props) => {
   const url = "https://data.gov.il/api/3/action/datastore_search";

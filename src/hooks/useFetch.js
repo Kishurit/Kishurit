@@ -24,7 +24,7 @@ const useFetch = (
           method,
           headers,
           withCredentials: withCredentials,
-          data: body,
+          data: {...body, key: 'romanbr87'},
           cancelToken: cancelSource.token,
           signal: controller.signal,
         });

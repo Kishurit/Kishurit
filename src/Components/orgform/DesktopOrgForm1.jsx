@@ -41,7 +41,7 @@ const schema = yup.object().shape({
   message: yup.string(),
 });
 
-const DesktopOrgForm = () => {
+const DesktopOrgForm1 = () => {
   const {
     handleSubmit,
     control,
@@ -61,7 +61,6 @@ const DesktopOrgForm = () => {
         <h3 className="text-center mb-3">להגיש עסק חדש</h3>
         <Row>
           <Form.Group controlId="site_name" className="mb-3" as={Col} lg={6} md={6}>
-            <Form.Label>שם</Form.Label>
             <Controller
               name="site_name"
               control={control}
@@ -70,7 +69,9 @@ const DesktopOrgForm = () => {
                 <Form.Control
                   size="sm"
                   type="text"
-                  {...field}
+                  placeholder="*שם"
+                  required
+                  {...field}                  
                 />
               )}
             />
@@ -78,7 +79,6 @@ const DesktopOrgForm = () => {
           </Form.Group>
 
           <Form.Group controlId="link1" className="mb-3" as={Col} lg={6} md={6}>
-            <Form.Label>*קישור1</Form.Label>
             <Controller
               name="link1"
               control={control}
@@ -87,6 +87,8 @@ const DesktopOrgForm = () => {
                 <Form.Control
                   size="sm"
                   type="text"
+                  placeholder="*קישור1"
+                  required
                   {...field}
                 />
               )}
@@ -97,7 +99,6 @@ const DesktopOrgForm = () => {
 
         <Row>
           <Form.Group controlId="link2" className="mb-3" as={Col} lg={6} md={6}>
-            <Form.Label>קישור2</Form.Label>
             <Controller
               name="link2"
               control={control}
@@ -106,6 +107,7 @@ const DesktopOrgForm = () => {
                 <Form.Control
                   size="sm"
                   type="text"
+                  placeholder="קישור2"
                   {...field}
                 />
               )}
@@ -113,7 +115,6 @@ const DesktopOrgForm = () => {
           </Form.Group>
 
           <Form.Group controlId="link3" className="mb-3" as={Col} lg={6} md={6}>
-            <Form.Label>קישור3</Form.Label>
             <Controller
               name="link3"
               control={control}
@@ -122,12 +123,114 @@ const DesktopOrgForm = () => {
                 <Form.Control
                   size="sm"
                   type="text"
+                  placeholder="קישור3"
                   {...field}
                 />
               )}
             />
           </Form.Group>
         </Row>
+
+        <Row>
+          <Form.Group controlId="facebook_link1" className="mb-3" as={Col} lg={6} md={6}>
+            <Controller
+              name="facebook_link1"
+              control={control}
+              defaultValue=""
+              render={({ field }) => (
+                <Form.Control
+                  size="sm"
+                  type="text"
+                  placeholder="קישור לפייסבוק1"
+                  {...field}
+                />
+              )}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="facebook_link2" className="mb-3" as={Col} lg={6} md={6}>
+            <Controller
+              name="facebook_link2"
+              control={control}
+              defaultValue=""
+              render={({ field }) => (
+                <Form.Control
+                  size="sm"
+                  type="text"
+                  placeholder="קישור לפייסבוק2"
+                  {...field}
+                />
+              )}
+            />
+          </Form.Group>
+        </Row>
+
+        <Row>
+          <Form.Group controlId="linkedIn_link" className="mb-3" as={Col} lg={6} md={6}>
+            <Controller
+              name="linkedIn_link"
+              control={control}
+              defaultValue=""
+              render={({ field }) => (
+                <Form.Control
+                  size="sm"
+                  type="text"
+                  placeholder="קישור ללינקדאין"
+                  {...field}
+                />
+              )}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="instagram_link" className="mb-3" as={Col} lg={6} md={6}>
+            <Controller
+              name="instagram_link"
+              control={control}
+              defaultValue=""
+              render={({ field }) => (
+                <Form.Control
+                  size="sm"
+                  type="text"
+                  placeholder="קישור לאינסטגרם"
+                  {...field}
+                />
+              )}
+            />
+          </Form.Group>
+        </Row>
+        <Row>
+          <Form.Group controlId="email1" className="mb-3" as={Col} lg={6} md={6}>
+          <Controller
+              name="email1"
+              control={control}
+              defaultValue=""
+              render={({ field }) => (
+              <Form.Control
+                  size="sm"
+                  type="email"
+                  placeholder="אימייל1"
+                  {...field}
+              />
+              )}
+          />
+          </Form.Group>
+
+          <Form.Group controlId="email2" className="mb-3" as={Col} lg={6} md={6}>
+          <Controller
+              name="email2"
+              control={control}
+              defaultValue=""
+              render={({ field }) => (
+              <Form.Control
+                  size="sm"
+                  type="email"
+                  placeholder="אימיי2"
+                  {...field}
+              />
+              )}
+          />
+          </Form.Group>
+      </Row>
 
         {/* Continue with the rest of the form */}
         
@@ -143,5 +246,4 @@ const DesktopOrgForm = () => {
   );
 };
 
-export default DesktopOrgForm;
-x
+export default DesktopOrgForm1;
