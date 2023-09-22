@@ -5,3 +5,8 @@ src/api.js
 src/api.js
 src/api.js
 src/api.js
+src/DB-Mangaer/Categories/DbCat.jsx
+src/DB-Mangaer/Categories/DbCatForm.jsx
+src/DB-Mangaer/SubCat/DbSubCat.jsx
+src/DB-Mangaer/SubCat/DbSubCatForm.jsx
+src/style/cat.css
