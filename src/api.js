@@ -2,8 +2,8 @@ import React from 'react';
 import axios, {isCancel, AxiosError} from 'axios';
 const context = React.createContext();
 
-//const baseUrl = 'https://wild-cyan-goshawk-kit.cyclic.cloud';
-const baseUrl = 'https://jealous-jay-pleat.cyclic.app';
+const baseUrl = 'https://wild-cyan-goshawk-kit.cyclic.cloud';
+//const baseUrl = 'https://jealous-jay-pleat.cyclic.app';
 //const baseUrl = 'http://localhost:8080';
 export const serverURL = (url) => `${baseUrl}${url}`;
 
