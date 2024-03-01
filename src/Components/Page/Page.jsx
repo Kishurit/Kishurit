@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaExternalLinkAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 import "../../style/page.css";
-import MapWithLocation from "./MapWithLocation";
+// import MapWithLocation from "./MapWithLocation";
 
 export default function Page() {
   const [position, setPosition] = useState();
@@ -130,7 +130,7 @@ export default function Page() {
 
         <Col lg={6} md={6}>
           {/* <h1>{position && `${position[0]}, ${position[1]}`}</h1> */}
-          {position && <MapWithLocation position={position}/> }
+          {/* {position && <MapWithLocation position={position}/> } */}
         </Col>
       </Row>
     </Container>

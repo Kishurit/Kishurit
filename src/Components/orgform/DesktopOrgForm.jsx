@@ -224,7 +224,7 @@ const DesktopOrgForm = ({ handleSubmit }) => {
           </Form.Group>
         </Row>
 
-        <Row fluid>
+        <Row>
           <Col className={isMobile && "d-grid"}>
             <Button variant="primary" size="sm" type="submit">
               לשלוח

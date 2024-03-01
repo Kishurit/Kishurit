@@ -1,3 +1,4 @@
+import React from "react";
 import { isBrowser } from "react-device-detect";
 import { Col, Container, Row } from 'react-bootstrap';
 import { useSelector } from "react-redux";

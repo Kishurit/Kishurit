@@ -234,7 +234,7 @@ const DesktopOrgForm1 = () => {
 
         {/* Continue with the rest of the form */}
         
-        <Row fluid>
+        <Row>
           <Col className={isMobile && "d-grid"}>
             <Button variant="primary" size="sm" type="submit">
               לשלוח

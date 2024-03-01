@@ -1,63 +1,59 @@
 {
-  "homepage": "http://kishurit.vercel.app/",
-  "name": "kishurit",
-  "version": "0.1.0",
-  "description": "Index of employment websites",
-  "author": "Roman Braverman",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@hookform/resolvers": "^3.3.1",
-    "@reduxjs/toolkit": "^1.9.3",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^1.5.0",
-    "bootstrap": "^5.3.1",
-    "geolib": "^3.3.4",
-    "leaflet": "^1.9.4",
-    "lodash": "^4.17.21",
-    "react": "^17.0.2",
-    "react-bootstrap": "^2.8.0",
-    "react-bootstrap-typeahead": "^6.2.3",
-    "react-device-detect": "^2.2.3",
-    "react-dom": "^17.0.2",
-    "react-hook-form": "^7.46.1",
-    "react-icons": "^4.11.0",
-    "react-leaflet": "^4.2.1",
-    "react-notifications": "^1.7.4",
-    "react-redux": "^8.1.2",
-    "react-router-dom": "^5.3.4",
-    "react-scripts": "^5.0.1",
-    "redux": "^4.2.1",
-    "styled-components": "^6.0.7",
-    "web-vitals": "^1.1.2",
-    "yup": "^1.2.0"
-  },
-  "scripts": {
-    "predeploy": "npm run build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {}
+    "homepage": "http://kishurit.vercel.app/",
+    "name": "kishurit",
+    "version": "0.1.0",
+    "description": "Index of employment websites",
+    "author": "Roman Braverman",
+    "private": true,
+    "dependencies": {
+        "@hookform/resolvers": "^3.3.4",
+        "@reduxjs/toolkit": "^1.9.7",
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "axios": "^1.6.7",
+        "bootstrap": "^5.3.2",
+        "leaflet": "^1.9.4",
+        "lodash": "^4.17.21",
+        "react": "^18.2.0",
+        "react-bootstrap": "^2.10.1",
+        "react-bootstrap-typeahead": "^6.3.2",
+        "react-device-detect": "^2.2.3",
+        "react-dom": "^18.2.0",
+        "react-hook-form": "^7.50.1",
+        "react-icons": "^4.12.0",
+        "react-leaflet": "^4.2.1",
+        "react-notifications": "^1.7.4",
+        "react-redux": "^8.1.3",
+        "react-router-dom": "^5.3.4",
+        "react-scripts": "^5.0.1",
+        "redux": "^4.2.1",
+        "styled-components": "^6.1.8",
+        "web-vitals": "^2.1.4",
+        "yup": "^1.3.3"
+    },
+    "scripts": {
+        "start": "react-scripts --openssl-legacy-provider start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }

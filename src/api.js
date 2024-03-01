@@ -10,7 +10,7 @@ export const Provider = context.Provider;
 export const Consumer = context.Consumer;
 
 export const fetchData =  async (url, method='POST', dataForServer = undefined, withCredentials = false) => {
-    dataForServer =  {...dataForServer, key: 'romanbr87'}
+    dataForServer =  {...dataForServer, key: process.env.REACT_APP_APIKEY}
     const requestOptions = {
         method: method,
         headers: {'Content-Type': 'application/json'},

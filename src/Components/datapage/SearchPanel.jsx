@@ -1,3 +1,4 @@
+import React from "react";
 import { Button, Col, FormControl, InputGroup, Row } from "react-bootstrap";
 
 export default function SearchPanel({searchText, lg, md}) {
