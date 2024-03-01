@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { Router, Switch, Route } from 'react-router-dom';
-import { createBrowserHistory } from "history";
+import { BrowserRouter, Route } from 'react-router-dom';
 import { NotificationContainer } from 'react-notifications';
 
 import { fetchData } from './store/slices/data-slice';
@@ -23,36 +22,26 @@ import 'react-notifications/lib/notifications.css';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 
 export default function App(props) {
-  const windowSize = useRef(window.innerWidth);
   const dispatch = useDispatch();
-  const history = createBrowserHistory();
 
   useEffect(() => {
-    //console.clear ();
+    console.clear();
     dispatch(fetchData());
-    alert (process.env.REACT_APP_APIKEY);
   }, [dispatch])
 
   return (
-    <Router forceRefresh={false} basename='/' history={history}>
+    <BrowserRouter basename="/">
       <NotificationContainer />
       <Menu />
-
-      <Route render={({ location }) => (
-        <Switch location={location}>
-          <Route exact path='/' component={() => { return <Home /> }} />
-          <Route exact path='/neworg' component={() => { return <OrgForm /> }} />
-          <Route exact path='/About' component={() => { return <About /> }} />
-          <Route path='/page' render={(match) => <Page />} />
-
-          <Route path='/cat1234' component={() => { return <DbCat /> }} />
-          <Route path='/subcat1234' component={() => { return <DbSubCat /> }} />
-          <Route path='*' component={() => { return <p className='uicontainer'>Null</p> }} status={404} />
-        </Switch>
-      )} />
-
+      <Route exact path="/" component={Home} />
+      <Route exact path="/neworg" component={OrgForm} />
+      <Route exact path="/about" component={About} />
+      <Route path="/page" component={Page} />
+      <Route path="/cat1234" component={DbCat} />
+      <Route path="/subcat1234" component={DbSubCat} />
+      <Route path="/*" render={() => <p className="uicontainer">Null</p>} />
       <Footer />
-    </Router>
+    </BrowserRouter>
   )
 }
 

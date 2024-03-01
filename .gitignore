@@ -1,13 +1,24 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
 node_modules
-j
-src/api.js
-src/api.js
-src/api.js
-src/api.js
-src/api.js
-src/DB-Mangaer/Categories/DbCat.jsx
-src/DB-Mangaer/Categories/DbCatForm.jsx
-src/DB-Mangaer/SubCat/DbSubCat.jsx
-src/DB-Mangaer/SubCat/DbSubCatForm.jsx
-src/style/cat.css
-.env
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

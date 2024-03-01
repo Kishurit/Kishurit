@@ -2,15 +2,15 @@ import React from 'react';
 import axios, {isCancel, AxiosError} from 'axios';
 const context = React.createContext();
 
-const baseUrl = 'https://delightful-teal-rabbit.cyclic.app';
-//const baseUrl = 'http://localhost:8081';
+//const baseUrl = 'https://delightful-teal-rabbit.cyclic.app';
+const baseUrl = 'http://localhost:8081';
 export const serverURL = (url) => `${baseUrl}${url}`;
 
 export const Provider = context.Provider;
 export const Consumer = context.Consumer;
 
 export const fetchData =  async (url, method='POST', dataForServer = undefined, withCredentials = false) => {
-    dataForServer =  {...dataForServer, key: process.env.REACT_APP_APIKEY}
+    dataForServer =  {...dataForServer, key: import.meta.env.VITE_APIKEY}
     const requestOptions = {
         method: method,
         headers: {'Content-Type': 'application/json'},

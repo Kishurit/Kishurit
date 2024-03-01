@@ -1,26 +1,8 @@
-<p align="left">
- <h2 align="left">Kishurit</h2>
- <h3 align="left">Catalogue of employment websites</h3>
-</p>
-  <p align="left">
-    <a href="https://github.com/romanbr87/Kishurit/graphs/contributors">
-      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/romanbr87/Kishurit" />
-    </a>
-    <a href="https://github.com/romanbr87/Kishurit/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/romanbr87/Kishurit?color=0088ff" />
-    </a>
-    <a href="https://github.com/romanbr87/Kishurit/pulls">
-      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/romanbr87/Kishurit?color=0088ff" />
-    </a>
-    <br />
-  </p>
+# React + Vite
 
-  <p align="left">
-    <a href="https://github.com/romanbr87/Kishurit/issues/new/choose">Report Bug</a>
-    ·
-    <a href="https://github.com/romanbr87/Kishurit/issues/new/choose">Request Feature</a>
-    ·
-    <a href="https://github.com/romanbr87/Kishurit/discussions">Ask Question</a>
-  </p>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-[Persentation](https://docs.google.com/presentation/d/15i609rrwbGRjuIQSpSu6timNqsv-Xfdo/edit?usp=sharing&ouid=104519556585425713346&rtpof=true&sd=true) about the website in Hebrew
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
