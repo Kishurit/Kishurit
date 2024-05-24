@@ -1,0 +1,33 @@
+<Row>
+    <Form.Group controlId="email1" className="mb-3" as={Col} lg={6} md={6}>
+    <Controller
+        name="email1"
+        control={control}
+        defaultValue=""
+        render={({ field }) => (
+        <Form.Control
+            size="sm"
+            type="email"
+            placeholder="אימייל1"
+            {...field}
+        />
+        )}
+    />
+    </Form.Group>
+
+    <Form.Group controlId="email2" className="mb-3" as={Col} lg={6} md={6}>
+    <Controller
+        name="email2"
+        control={control}
+        defaultValue=""
+        render={({ field }) => (
+        <Form.Control
+            size="sm"
+            type="email"
+            placeholder="אימיי2"
+            {...field}
+        />
+        )}
+    />
+    </Form.Group>
+</Row>
