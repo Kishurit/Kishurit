@@ -11,7 +11,6 @@ const StreetSelect = (props) => {
   const [street, setStreet] = useState("");
 
   useEffect(() => {
-    console.clear();
     var citisParams = {
       params: {
         resource_id: "9ad3862c-8391-4b2f-84a4-2d4c68625f4b",
@@ -28,7 +27,7 @@ const StreetSelect = (props) => {
         //     .filter((e) => e !== "לא רשום")
         .map((e, index) => ({ id: index + 1, label: e }));
       setStreets(addedStreets);
-      console.log(addedStreets);
+      //console.log(addedStreets);
     });
   }, [props.city]);
 

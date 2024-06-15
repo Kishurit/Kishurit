@@ -26,7 +26,7 @@ export default function DataTable(props) {
 
           {props.soryByAtrr(e1.links).map((e2, j) => (
             <ListGroupItem
-              key={e2.site_name}
+              key={`${e1.cat} ${j}`}
               style={{
                 border: "none",
                 margin: "0",
@@ -34,26 +34,33 @@ export default function DataTable(props) {
               }}
             >
               {("" + (j + 1)).padStart(2, "0") + ". "}
-              <a href={e2.link}>{e2.site_name}</a>
+              <a href={e2.web_link[0]}>{e2.org_name}</a>
 
-              {e2.link2 && <a href={e2.link2}>קישור 2</a>}
+              {e2.web_link.slice(1).map((web_link, i) => (
+                <a key={`web_link${i}`} href={web_link}>{`קישור ${i + 2}`}</a>
+              ))}
 
-              {e2.link3 && <a href={e2.link3}>קישור 3</a>}
-              {e2.link4 && <a href={e2.link4}>קישור 4</a>}
+              {/* {e2.link3 && <a href={e2.link3}>קישור 3</a>}
+              {e2.link4 && <a href={e2.link4}>קישור 4</a>} */}
 
-              {e2.facebook_link1 && <a href={e2.facebook_link1}>דף פייסבוק</a>}
+              {e2?.facebook_link?.map((facebook_link, i) => <a key={`facebook_link${i}`} href={facebook_link}>{`דף פייסבוק ${i + 1}`}</a>)}
+              {/* {e2.facebook_link1 && <a href={e2.facebook_link1}>דף פייסבוק</a>}
 
               {e2.facebook_link2 && <a href={e2.facebook_link2}>דף פייסבוק2</a>}
+               */}
 
-              {e2.linkedIn_link && <a href={e2.linkedIn_link}>לינקדאין</a>}
 
-              {e2.instagram_link && <a href={e2.instagram_link}>דף אינסטגרם</a>}
+              {e2?.linkedIn_link?.map((linkedIn_link, i) => <a key={`linkedin_link${i}`} href={linkedIn_link}>{`לינקדאין ${i + 1}`}</a>)}
+              {e2?.instagram_link?.map((instagram_link, i) => <a key={`instagram_link${i}`} href={instagram_link}>{`אינסטגרם ${i + 1}`}</a>)}
+
+              {/* {e2.linkedIn_link && <a href={e2.linkedIn_link}>לינקדאין</a>} */}
+              {/* {e2.instagram_link && <a href={e2.instagram_link}>דף אינסטגרם</a>} */}
 
               <Button
                 variant="link"
                 style={{ fontWeight: "400", marginTop: "-0.3em" }}
                 onClick={() => {
-                  props.setName(e2.site_name);
+                  props.setName(e2.org_name);
                   props.setShowModal(true);
                 }}
               >
