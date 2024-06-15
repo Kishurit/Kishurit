@@ -1,0 +1,1091 @@
+{
+  "job": [
+    {
+      "name": "מקומות עבודה ציבוריים",
+      "desc": "מקומות עבודה ציבוריים מטעם המדינה",
+      "links": [
+        {
+          "cat": "אתרי ממשלה",
+          "links": [
+            {
+              "site_name": "נציב שירות המדינה",
+              "link": "https://www.gov.il/he/service/apply_for_a_civil_service_job_via_tenders_system",
+              "link2": "https://www.gov.il/he/Departments/civil_service_commission",
+              "link3": "https://www.gov.il/he/Departments/publications/?publicationType=0ec5a7ef-977c-459f-8c0a-dcfbe35c8164&drushimStatusType=1&skip=0&limit=10",
+              "facebook_link1": "https://www.facebook.com/Civil.service.Israel",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "pniyot@csc.gov.il",
+              "email2": "",
+              "tel1": "074-769-9100",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "גיוס לשירות המדינה",
+              "link": "https://ejobs.gov.il/gius",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/israel.civil.service",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "instagram_link": "https://www.instagram.com/israel.civil.service.career",
+              "email1": "giyus@bynetos.co.il",
+              "email2": "",
+              "tel1": "077-920-8568",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "דרושים בשירות המדינה",
+              "link": "https://www.gov.il/he/Departments/Topics/tenders_hr",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "אתר מכרזים של המדינה",
+              "link": "https://jobiz.gov.il/jobs",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        },
+        {
+          "cat": "אתרי גיוס למשרות מטעם המדינה",
+          "links": [
+            {
+              "site_name": "דרושים govo",
+              "link": "https://www.govojobs.co.il",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/govo.jobs",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "instagram_link": "https://instagram.com/govo_drushim",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "משרות בשירות המדינה - אתר אזרחי",
+              "link": "http://www.govjob.co.il",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/govjob",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "editor@govjob.co.il",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "גובו מכרזים",
+              "link": "http://www.govo.co.il",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/govo.co.il",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "072-320-1263",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "גוף ממלכתי משרות",
+              "link": "https://www.facebook.com/%D7%92%D7%95%D7%A3-%D7%9E%D7%9E%D7%9C%D7%9B%D7%AA%D7%99-%D7%9E%D7%A9%D7%A8%D7%95%D7%AA-1431024810253972",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        },
+        {
+          "cat": "גופים וארגונים ממשלתיים/מדיניים",
+          "links": [
+            {
+              "site_name": "מערך הדיגיטל הלאומי",
+              "link": "https://govextra.gov.il/national-digital-agency/jobs/home/",
+              "link2": "https://www.gov.il/he/departments/publications/drushim/hr_job",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "https://www.linkedin.com/company/gov.il/",
+              "email1": "HR@DIGITAL.GOV.IL",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "הרשות השופטת - בתי משפט",
+              "link": "https://www.gov.il/he/Departments/publications/?OfficeId=b7f4cf74-9ceb-454d-a057-e9bdc1dcdae9&blockCollector=true&publicationType=0ec5a7ef-977c-459f-8c0a-dcfbe35c8164&skip=0&limit=10",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "כנסת",
+              "link": "https://main.knesset.gov.il/About/KnessetWork/pages/wanted.aspx",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "gius.helpdesk@knesset.gov.il",
+              "email2": "",
+              "tel1": "02-6408555",
+              "tel2": "",
+              "whatsapp": "",
+              "location": "center"
+            },
+            {
+              "site_name": "בנק ישראל",
+              "link": "https://careers.boi.org.il/",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/bankofisraelcareer",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "https://www.linkedin.com/company/bank-of-israel/",
+              "email1": "cv@boi.org.il",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        },
+        {
+          "cat": "גופים בטחוניים",
+          "links": [
+            {
+              "site_name": "משרד הביטחון",
+              "link": "https://www.mod.gov.il/Citizen_Service/clalim/drushim/Pages/Jobs.aspx",
+              "link2": "https://www.mod.gov.il/Citizen_Service/clalim/drushim/Pages/Apply-for-job.aspx",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "שבכ",
+              "link": "https://www.shabak.gov.il/pages/career.html",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/SHABAKCAREER",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "המוסד",
+              "link": "https://www.mossad.gov.il/heb/careers/Pages/default.aspx",
+              "link2": "https://www.mossad.gov.il/heb/careers/pages/all.aspx",
+              "facebook_link1": "https://www.facebook.com/pg/המוסד-למודיעין-ולתפקידים-מיוחדים-קריירה-167813393967451",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "mossad-career@mail.gov.il",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "משטרה",
+              "link": "https://www.police.gov.il/join",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/israel.giyus.police",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "שבס",
+              "link": "https://govextra.gov.il/ips/recruitment/home",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "צהל",
+              "link": "https://www.idf.il/%D7%90%D7%AA%D7%A8%D7%99%D7%9D/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D-%D7%9E%D7%A9%D7%A8%D7%95%D7%AA-%D7%91%D7%A6%D7%94%D7%9C",
+              "link2": "https://www.idf.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "ovdei.tzahal@gmail.com",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        },
+        {
+          "cat": "רשויות שונות מטעם הממשלה",
+          "links": [
+            {
+              "site_name": "רשות הטבע והגנים",
+              "link": "https://www.parks.org.il/jobs-page",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        },
+        {
+          "cat": "קופח ותחום הרפואה",
+          "links": [
+            {
+              "site_name": "משרד הבריאות",
+              "link": "https://www.health.gov.il/About/Careers/Pages/default.aspx",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "קופת חולים לאומית",
+              "link": "https://www.leumit.co.il/heb/Useful/jobs/jobopennings",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "קופת חולים מאוחדת",
+              "link": "https://www.meuhedet.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "קופת חולים מכבי",
+              "link": "https://www.maccabi4u.co.il/38324-he/Maccabi.aspx",
+              "link2": "https://www.maccabi4u.co.il/10886-he/Maccabi.aspx",
+              "link3": "https://www.maccabi4u.co.il/10899-he/Maccabi.aspx",
+              "link4": "",
+              "facebook_link1": "https://www.facebook.com/%D7%94%D7%90%D7%A0%D7%A9%D7%99%D7%9D-%D7%A9%D7%9C-%D7%9E%D7%9B%D7%91%D7%99-102335697831099",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "מכבי דנט",
+              "link": "https://maccabi-dent.com/%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94-%D7%91%D7%9E%D7%9B%D7%91%D7%99%D7%93%D7%A0%D7%98/",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "מכבי טבעי",
+              "link": "https://clinics.maccabitivi.co.il/",
+              "link2": "https://clinics.maccabitivi.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D-%D7%97%D7%93%D7%A9-2/",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "קופת חולים כללית",
+              "link": "https://www.clalit.co.il/he/info/career/Pages/default.aspx",
+              "link2": "https://jobs.clalitapps.co.il/Positions",
+              "facebook_link1": "https://www.facebook.com/clalit.careers",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "כללית סמייל",
+              "link": "https://jobs.clalitsmile.co.il",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/shilajobs",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "gius1@clalit.org.il",
+              "email2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "כללית משלימה",
+              "link": "https://jobs.clalitmashlima.co.il",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/shilajobs",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "gius1@clalit.org.il",
+              "email2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "כללית אסתטיקה",
+              "link": "https://jobs.clalitaesthetics.co.il",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/shilajobs",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "gius1@clalit.org.il",
+              "email2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        },
+        {
+          "cat": "חברות ממשלתיות",
+          "links": [
+            {
+              "site_name": "חברת חשמל",
+              "link": "https://careers.iec.co.il",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/ieccareer",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "דואר ישראל",
+              "link": "https://israelpost.co.il/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D-%D7%95%D7%9E%D7%A9%D7%A8%D7%95%D7%AA-%D7%A4%D7%A0%D7%95%D7%99%D7%95%D7%AA",
+              "link2": "https://services.israelpost.co.il/mihrazim.nsf/jobs",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "חברת נתיבי ישראל",
+              "link": "https://www.iroads.co.il/%D7%A2%D7%9C-%D7%94%D7%97%D7%91%D7%A8%D7%94/jobs-page",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "רכבת ישראל",
+              "link": "https://www.rail.co.il/about/career",
+              "link2": "https://xn----0hcb7ahk2feih.org.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
+              "facebook_link1": "https://www.facebook.com/iRailcareer",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "מקורות",
+              "link": "https://mekorot-jobs.co.il",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        },
+        {
+          "cat": "גופים ציבוריים שונים",
+          "links": [
+            {
+              "site_name": "ביטוח לאומי",
+              "link": "https://www.btl.gov.il/About/jobs/Pages/default.aspx",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "לשכת התעסוקה",
+              "link": "https://www.taasuka.gov.il/he/Applicants",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "מבקר המדינה",
+              "link": "https://www.mevaker.gov.il/he/UsefulInformation/Pages/Drushim.aspx?AspxAutoDetectCookieSupport=1",
+              "link2": "https://www.mevaker.gov.il/he/jobTenders",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "גופים ציבוריים",
+      "desc": "גופים ציבוריים כמו בנקים, בתי חולים, מוסדות אקדמאיים וכו...",
+      "links": [
+        {
+          "cat": "בתי חולים",
+          "links": [
+            {
+              "site_name": "בית חולים רמבם",
+              "link": "https://www.rambam.org.il/about-rambam/jobs",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "בית חולים פוריה",
+              "link": "http://www.poria.health.gov.il/?CategoryID=1989",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "המרכז הרפואי לגליל נהריה",
+              "link": "https://www.gmc.org.il/?CategoryID=1298",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "מרכז רפואי זיו",
+              "link": "https://www.gov.il/he/departments/topics/career-ziv",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "בית חולים האנגלי בנצרת",
+              "link": "https://nazhosp.com/jobs/?lang=he",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "בית חולים האיטלקי בנצרת",
+              "link": "https://hfhosp.org/he/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D-0",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "whatsapp": "",
+              "location": "north"
+            }
+          ]
+        },
+        {
+          "cat": "מוסדות אקדמאים",
+          "links": [
+            {
+              "site_name": "טכניון",
+              "link": "https://hr.technion.ac.il/positions",
+              "link2": "https://hr.trdf.co.il/%D7%9C%D7%95%D7%97_%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
+              "facebook_link1": "https://www.facebook.com/TechnionJobs",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "אוניברסיטת חיפה",
+              "link": "https://www.haifa.ac.il/index.php/he/open-positions.html",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/lbraunsht",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "misrot@univ.haifa.ac.il",
+              "email2": "",
+              "tel1": "04-828-8203",
+              "tel2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "מכללת עמק יזרעאל",
+              "link": "https://www.yvc.ac.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "מכללת אורנים",
+              "link": "https://www.oranim.ac.il/sites/heb/about/careers/pages/default.aspx",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "מכללת כינרת",
+              "link": "https://www.kinneret.ac.il/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%9e%d7%9b%d7%9c%d7%9c%d7%94/%d7%93%d7%a8%d7%95%d7%a9%d7%99%d7%9d",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": "north"
+            },
+            {
+              "site_name": "מכללת גליל מערבי",
+              "link": "https://www.wgalil.ac.il/staff/wgc_career",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": "north"
+            }
+          ]
+        },
+        {
+          "cat": "גופים ציבוריים שאינם מטעם המדינה",
+          "links": [
+            {
+              "site_name": "מתי - מכון התקנים הישראלי",
+              "link": "https://www.sii.org.il/he/career",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "03-6467696",
+              "tel2": "",
+              "whatsapp": "",
+              "location": "center",
+              "address": "חיים לבנון 42, תל אביב"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "שונות",
+      "desc": "",
+      "links": [
+        {
+          "cat": "מוזיאונים",
+          "links": [
+            {
+              "site_name": "מדעטק",
+              "link": "https://www.madatech.org.il/jobs",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "info@madatech.org.il",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        },
+        {
+          "cat": "שונות ללא קטגוריה",
+          "links": [
+            {
+              "site_name": "target market",
+              "link": "https://target-market.co.il/jobs",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "דרך חדשה בתנועה - neway Traffic",
+              "link": "https://neway1.co.il/%d7%93%d7%a8%d7%95%d7%a9%d7%99%d7%9d",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "OFFICE@NEWAY1.CO.IL",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "קליבר מטרות",
+              "link": "https://www.kaliber.co.il/%D7%A7%D7%9C%D7%99%D7%91%D7%A8-%D7%9E%D7%98%D7%A8%D7%95%D7%AA-%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/kaliber.comm",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "פרסומים בדפי פייסבוק",
+      "desc": "",
+      "links": [
+        {
+          "cat": "דפי תעסוקה בפייסבוק",
+          "links": [
+            {
+              "site_name": "לוח עבודות בפייסבוק",
+              "link": "https://www.facebook.com/jobs",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "דרושים טבריה",
+              "link": "https://www.facebook.com/droshimtiberia",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "דרושים - צפון",
+              "link": "https://www.facebook.com/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D-%D7%9E%D7%97%D7%95%D7%96-%D7%94%D7%A6%D7%A4%D7%95%D7%9F-%D7%A0%D7%A4%D7%AA-%D7%99%D7%96%D7%A8%D7%A2%D7%90%D7%9C-%D7%A0%D7%A4%D7%AA-%D7%A6%D7%A4%D7%AA-%D7%A0%D7%A4%D7%AA-%D7%A2%D7%9B%D7%95-%D7%A0%D7%A4%D7%AA-%D7%9B%D7%A0%D7%A8%D7%AA-%D7%A8%D7%9E%D7%AA-%D7%94%D7%92%D7%95%D7%9C%D7%9F-1169679953202957",
+              "link2": "",
+              "facebook_link1": "drushim1318@gmail.com",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "אחרים",
+      "desc": "אתרים וארגונים שונים בתחום התעסוקה וההכשרה המקצועית",
+      "links": [
+        {
+          "cat": "אתרים, חברות וכל מה שמסביב לעולם התעסוקה",
+          "links": [
+            {
+              "site_name": "אתר קורסים ממשלתי",
+              "link": "https://campus.gov.il/course",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "דנה ונועה",
+              "link": "http://dananoajobs.com",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/dananoajobs",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "instagram_link": "https://www.instagram.com/dana.and.noa",
+              "email1": "noaohayon@gmail.com",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "jobzone",
+              "link": "https://jobzone.co.il",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "instagram_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "HRus משאבי אנוש זה אנחנו",
+              "link": "https://www.hrus.co.il",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/HRus.co.il",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "instagram_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "העתיד שלך",
+              "link": "http://www.yourfuture.co.il",
+              "link2": "",
+              "facebook_link1": "",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "",
+              "email2": "",
+              "tel1": "",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "אשנב",
+              "link": "https://www.eshnav-ltd.co.il",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/eshnavcareer",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "instagram_link": "",
+              "email1": "info@eshnav-ltd.co.il",
+              "email2": "",
+              "tel1": "037444941",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "תעסוקה לאוכלוסיות ספציפיות",
+      "desc": "תעסוקה והכשרה מקצועית לאוכלוסיות כגון בעלי מוגבלויות, בני מיעוטים, חרדים וכו...",
+      "links": [
+        {
+          "cat": "תעסוקה והכשרה לבעלי מוגבלויות",
+          "links": [
+            {
+              "site_name": "עבודה נגישה",
+              "link": "https://avodanegisha.labor.gov.il/",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/AvodaNegisha",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "info.callcenter@gav.co.il",
+              "email2": "",
+              "tel1": "079-696-6055",
+              "tel2": "",
+              "whatsapp": "",
+              "location": ""
+            },
+            {
+              "site_name": "תעסוקה שווה",
+              "link": "https://taasukashava.org.il/job-seekers/",
+              "link2": "",
+              "facebook_link1": "https://www.facebook.com/TaasukaShava",
+              "facebook_link2": "",
+              "facebook_link3": [],
+              "linkedIn_link": "",
+              "email1": "info@taasukashava.org.il",
+              "email2": "",
+              "tel1": "*3968",
+              "tel2": "03-508-7888",
+              "whatsapp": "",
+              "location": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "text": {
+    "desc": "",
+    "about": ""
+  }
+}
