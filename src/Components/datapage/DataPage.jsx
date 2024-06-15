@@ -40,7 +40,7 @@ function DataPage(props) {
   const [street, setStreet] = useState([]);
   const searchText = useRef();
 
-  const {data} = useFetch(serverURL(`/${index}`)) 
+  const { data } = useFetch(serverURL(`/${index}`))
 
   const elementColoumnWidth1 =
     window.innerWidth < 1200 ? { lg: "5", md: "5" } : { lg: "4", md: "4" };
@@ -87,12 +87,7 @@ function DataPage(props) {
   return (
     <>
       <Container className="uicontainer">
-        <h2
-          className="text-center title"
-          style={{ textDecoration: "underline" }}
-        >
-          קישורית {id}
-        </h2>
+        <h2 className="text-center title" style={{ textDecoration: "underline" }}>קישורית</h2>
         <br style={{ padding: "0", margin: "0" }} />
 
         <Form onSubmit={SearchInData}>
