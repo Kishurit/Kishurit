@@ -2,9 +2,9 @@ import React from 'react';
 import axios, {isCancel, AxiosError} from 'axios';
 const context = React.createContext();
 
+const baseUrl = 'https://kishurit-server.onrender.com'
 //const baseUrl = 'https://delightful-teal-rabbit.cyclic.app';
 //const baseUrl = 'http://localhost:8081';
-const baseUrl = 'https://kishurit-server.onrender.com';
 export const serverURL = (url) => `${baseUrl}${url}`;
 
 export const Provider = context.Provider;

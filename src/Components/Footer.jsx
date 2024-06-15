@@ -9,10 +9,10 @@ export default function Footer() {
     const WifiIcon = () => isOnline ? <BsWifi/> : <BsWifiOff/>;
 
     return (
-        <footer className="fixed-bottom bg-light"> 
-            <h5 className="me-4 mt-1 mb-1">
+        <div className="fixed-bottom bg-light"> 
+            <h5 className="me-4 mt-1">
                 <WifiIcon/> {data} רשומות
             </h5>
-        </footer>
+        </div>
     );
 }

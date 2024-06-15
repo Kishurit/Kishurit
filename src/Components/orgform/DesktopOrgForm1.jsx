@@ -230,7 +230,10 @@ const DesktopOrgForm1 = () => {
               )}
           />
           </Form.Group>
-      </Row>        
+      </Row>
+
+        {/* Continue with the rest of the form */}
+        
         <Row>
           <Col className={isMobile && "d-grid"}>
             <Button variant="primary" size="sm" type="submit">

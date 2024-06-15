@@ -11,12 +11,12 @@ const customIcon = (
     <FaMapMarker />
   </IconContext.Provider>
 );
-
 export default function MapWithLocation({ position }) {
+
   return (
     <div className="map-container">
       <div className="map-header">
-        <h1>Realtime Map {customIcon}</h1>
+        <h1>Realtime Map <customIcon /> </h1>
 
         <MapContainer
           center={position}
@@ -29,7 +29,7 @@ export default function MapWithLocation({ position }) {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          {position && (1 == 2) && (
+          {position && (1==2) && (
             <Marker position={position} icon={customIcon}>
               <Popup>You are here</Popup>
             </Marker>
